@@ -1,42 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <title>Welcome, but...</title>
-	<style type="text/css">
-		body { background-color: #000; color: #fff; font-size: 14px; text-align: center; font-family: arial, sans-serif; }
-		div.dialog {
-	width: 26em;
-	padding: 0 4em;
-	margin: 4em auto 0 auto;
-	border-top-color: #000;
-	border-right-color: #000;
-	border-bottom-color: #000;
-	border-left-color: #000;
-		}
-		h1 { font-size: 16px; color: #fff; line-height: 1.5em; }
-	</style>
-</head>
-<body>
-	<div class="dialog">
+{include file='header_new.tpl'}
 
-		<a href="javascript:history.go(-1);"><img src="/theme/progressus/assets/images/moon.jpg" alt="MOON" style="padding-bottom:20px; border-color:#000;" /></a>
+    <style type="text/css">
+        .fui {
+            font-size: 2em;
+        }
 
-		<h1>The page you want to visit is on the Moon now</h1>
+        #main {
+            margin-top: 100px;
+            min-height: 500px;
+        }
 
-    	<p>It is disconected between the Earth and the Moon. I will take it back next time when I go on business.</p>
+        #page-head {
+            display: inline;
+            margin-left: 4px;
+        }
 
-  </div>
+        .img-responsive {
+            margin-top: 3em;
+            margin-bottom: 3em;
+        }
 
-  <!-- Javascript -->
-  <script type="text/javascript">
-	try{
-		if(window.console && window.console.log)
-			console.log("偶然\n\n徐志摩\n\n我是天空里的一片云，\n偶尔投影在你的波心——\n你不必讶异，\n更无须欢喜——\n在转瞬间消灭了踪影。\n你我相逢在黑夜的海上，\n你有你的，我有我的，方向；\n你记得也好，\n最好你忘掉，\n在这交会时互放的光亮！\n","\nHey man! There is nothing here now.\nClick the moom to go back!\nwang@siyi.me\n\n");
-	}catch(e){
-	}
-	</script>
+        .dns {
+            margin-top: 0.4em;
+            margin-bottom: 0.6em;
+            font-weight: bold;
+            font-size: 2em;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="main">
+                <div>
+                    <span class="fui fui-alert-circle" aria-hidden="true"></span>
+                    <h3 id="page-head">错误404</h3>
+                </div>
+                <hr>
+                <img src="/theme/flatui/images/icons/png/iMac@2x.png" class="img-responsive center-block" style="width:300px;">
+                <p class="text-center lead">主机正在梦游...</p>
+            </div>
+        </div>
+    </div>
 
-</body>
-</html>
+
+{include file='footer_new.tpl'}

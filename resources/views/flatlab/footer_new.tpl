@@ -1,60 +1,44 @@
-<footer id="footer" class="top-space">
+<div class="bottom-menu bottom-menu-inverse">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-sm-2">
+                <a href="/" class="bottom-menu-brand">{$config["appName"]}</a>
+            </div>
+            <div class="col-md-10 col-sm-10">
+                <ul class="bottom-menu-list pull-left">
+                    <li class="active"><a href="/">首页</a></li>
+                    <li><a href="/tutorial">教程</a></li>
+                    <li><a href="/price">价格</a></li>
+                    <li><a href="/code">邀请</a></li>
+                    {if $user->isLogin}
+                    <li><a href="/user">用户中心</a></li>
+                    <li><a href="/user/logout">退出</a></li>
+                    {else}
+                    <li><a href="/auth/register">注册</a></li>
+                    <li><a href="/auth/login">登录</a></li>
+                    {/if}
+                </ul>
+                <span class="pull-right" style="font-size: 14px;">&copy; 2016 <a href="/" style="font-weight: bold;">{$config["appName"]}.</a> Powered by <a href="/staff" style="font-weight: bold;">STAFF.</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="application/javascript" src="/theme/flatui/js/vendor/jquery.min.js"></script>
+<script type="application/javascript" src="/theme/flatui/js/flat-ui.js"></script>
+<script type="application/javascript" src="/theme/flatui/js/addActiveClass.js"></script>
+<!-- <script type="application/javascript" src="/theme/flatui/js/application.js"></script> -->
+<!-- <script type="application/javascript" src="/theme/flatui/js/prettify.js"></script> -->
 
-		<div class="footer2">
-			<div class="container">
-				<div class="row">
-					
-					<div class="col-md-6 widget">
-						<div class="widget-body">
-							<p class="simplenav">
-								<b><a href="/">首页</a></b> | 
-								<a href="/code">邀请码</a> |
-								{if $user->isLogin}
-								<a href="/user/">用户中心</a> |
-								<a href="/user/logout">退出</a> |
-								{else}
-								<a href="/auth/login">登陆</a> |
-								<a href="/auth/register">注册</a>
-								{/if}
-							</p>
-						</div>
-					</div>
+{if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
 
-					<div class="col-md-6 widget">
-						<div class="widget-body">
-							<p class="text-right">
-								&copy; 2016 <a href="https://gosiyi.com">{$config["appName"]}.</a> Powered by <a href="/staff">STAFF.</a>{if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
-							</p>
-						</div>
-					</div>
-
-				</div> <!-- /row of widgets -->
-			</div>
-		</div>
-
-	</footer>	
-		
-
-
-
-
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="//cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-	<script src="//cdn.bootcss.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="/theme/progressus/assets/js/headroom.min.js"></script>
-	<script src="/theme/progressus/assets/js/jQuery.headroom.min.js"></script>
-	<script src="/theme/progressus/assets/js/template.js"></script>
-	<script src="https://static.geetest.com/static/tools/gt.js"></script>
-	<!--<script src="/theme/material/js/base.min.js"></script>-->
-	<!--<script src="/theme/material/js/project.min.js"></script>-->
-
-	<!-- Javascript -->
-  <script type="text/javascript">
+<!-- Javascript -->
+<script type="text/javascript">
 	try{
 		if(window.console && window.console.log)
 			console.log("偶然\n\n徐志摩\n\n我是天空里的一片云，\n偶尔投影在你的波心——\n你不必讶异，\n更无须欢喜——\n在转瞬间消灭了踪影。\n你我相逢在黑夜的海上，\n你有你的，我有我的，方向；\n你记得也好，\n最好你忘掉，\n在这交会时互放的光亮！\n","\nHey man! There is nothing here now.\nClick the moom to go back!\nwang@siyi.me\n\n");
 	}catch(e){
 	}
-	</script>
+</script>
+
 </body>
 </html>

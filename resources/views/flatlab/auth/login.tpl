@@ -1,82 +1,68 @@
 {include file='header_new.tpl'}
 
+<style type="text/css">
+    #no-login {
+    	margin-top: 160px;
+        margin-bottom: 100px;
+    }
+    div #embed-captcha svg {
+        margin:0 auto;
+    }
+</style>
 
-	<header id="head" class="secondary"></header>
 
-	<!-- container -->
-	<div class="container">
-
-		<ol class="breadcrumb">
-			<li><a href="/">首页</a></li>
-			<li class="active">登录</li>
-		</ol>
-
-		<div class="row">
-			
-			<!-- Article main content -->
-			<article class="col-xs-12 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">登录</h1>
-				</header>
-				
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<h3 class="thin text-center">登录到用户中心</h3>
-							<p class="text-center text-muted">如果您还没有注册，请 <a href="/auth/register">点击这里</a>注册. </p>
-							<hr>
-							
-							
+<div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-primary" id="no-login">
+                    <div class="panel-heading text-center">
+                        <h3 class="panel-title">登录 {$config["appName"]}</h3>
+                    </div>
+                    <div class="panel-body">
+                            <fieldset>
+                                <div class="form-group has-feedback" id="emailDiv">
+                                    <input class="form-control" id="email" placeholder="Email地址" name="email"
+                                           type="email" value="" required="required" autofocus="">
+                                    <span class="form-control-feedback fui-mail"></span>
+                                </div>
+                                <div class="form-group has-feedback" id="passwordDiv">
+                                    <input class="form-control" id="passwd" placeholder="密码" name="password"
+                                           type="password" required="required">
+                                    <span class="form-control-feedback fui-lock"></span>
+                                </div>
+                                <label class="checkbox" for="remember">
+                                    <input type="checkbox" data-toggle="checkbox" value="week"
+                                           id="remember" class="custom-checkbox" name="remember_me"><span
+                                            class="icons"><span
+                                                class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                                    记住我
+                                </label>
+                                
+                                {if $geetest_html != null}
 								<div class="top-margin">
-									<label>邮箱 <span class="text-danger">*</span></label>
-									<input type="text" class="form-control" id="email">
+									<div id="embed-captcha"></div>
 								</div>
-								<div class="top-margin">
-									<label>密码 <span class="text-danger">*</span></label>
-									<input type="password" class="form-control" id="passwd">
-								</div>
-								<div class="top-margin">
-									<label>两步验证码(没有就别填)</label>
-									<input type="text" class="form-control" id="code">
-								</div>
+								{/if}	
+                                <button type="submit" class="btn btn-lg btn-primary btn-block" id="login">
+                                    登录
+                                </button>
+                                <p class="help-block pull-left"><a href="/password/reset">忘记密码?</a></p>
+                                <p class="help-block pull-right"><a href="/auth/register">没有账户?</a></p>
+                            </fieldset>
+                            {include file='dialog.tpl'}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-									{if $geetest_html != null}
-									<div class="top-margin">
-										<div id="embed-captcha"></div>
-									</div>
-									{/if}							
 
-								<hr>
-								{include file='dialog.tpl'}
-
-								<div class="row">
-									<div class="col-lg-8">
-										<b><a href="/password/reset">忘记密码?</a></b>
-									</div>
-									<div class="col-lg-8">
-										<label class="checkbox">
-											<input class="checkbox" value="week" id="remember_me" name="remember_me" type="checkbox">记住我
-										</label>                        
-									</div>
-									<div class="col-lg-4 text-right">
-										<button id="login" class="btn btn-action" type="submit">登录</button>
-									</div>
-								</div>
-							
-						</div>
-					</div>
-
-				</div>
-				
-			</article>
-			<!-- /Article -->
-
-		</div>
-	</div>	<!-- /container -->
 
 
 
 {include file='footer_new.tpl'}
+
+<script src="https://static.geetest.com/static/tools/gt.js"></script>
 
 <script>
     $(document).ready(function(){
@@ -173,4 +159,3 @@
 </script>
 
 {/if}
-
