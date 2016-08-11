@@ -9,8 +9,8 @@
 {include file='user/main.tpl'}
 
 
-<script src="/assets/public/js/canvasjs.js"></script>
-<script src="/assets/public/js/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/canvasjs/1.7.0/canvasjs.js"></script>
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
 
       <!--main content start-->
       <section id="main-content">
@@ -19,7 +19,7 @@
             <h2 class="page-title"><i class="icon-equalizer"></i>&nbsp;节点列表 | <small>Node List</small></h2>
 
             <div class="col-md-10 col-md-offset-1">
-            	<div class="alert alert-warning fade in">
+              <div class="alert alert-warning fade in">
                     <button data-dismiss="alert" class="close close-sm" type="button">
                         <i class="fa fa-times"></i>
                     </button>
@@ -28,10 +28,10 @@
                     <p><a href="javascript:;" onClick="urlChange('guide')">如果您不知道如何查看节点的详细信息和二维码，请点我。</a></p>
                 </div>
                 <div class="panel panel-danger">
-                	<div class="panel-heading">
-                		节点列表
-                	</div>
-                	<div class="panel-body">
+                  <div class="panel-heading">
+                    节点列表
+                  </div>
+                  <div class="panel-body">
                   <div class="tile-wrap">
                       {$id=0}
                       {foreach $node_prefix as $prefix => $nodes}
@@ -179,7 +179,7 @@
                         
                       {/foreach}
                     </div>
-                	</div>
+                  </div>
                 </div>
             </div>
 
@@ -210,18 +210,18 @@
 
 function urlChange(id) {
     var site = './node/'+id;
-	if(id == 'guide')
-	{
-		var doc = document.getElementById('infoifram').contentWindow.document;
-		doc.open();
-		doc.write('<img src="https://www.zhaoj.in/wp-content/uploads/2016/07/1469595156fca44223cf8da9719e1d084439782b27.gif" style="width: 100%;height: 100%; border: none;"/>');
-		doc.close();
-	}
-	else
-	{
-		document.getElementById('infoifram').src = site;
-	}
-	$("#nodeinfo").modal();
+  if(id == 'guide')
+  {
+    var doc = document.getElementById('infoifram').contentWindow.document;
+    doc.open();
+    doc.write('<img src="https://www.zhaoj.in/wp-content/uploads/2016/07/1469595156fca44223cf8da9719e1d084439782b27.gif" style="width: 100%;height: 100%; border: none;"/>');
+    doc.close();
+  }
+  else
+  {
+    document.getElementById('infoifram').src = site;
+  }
+  $("#nodeinfo").modal();
 }
 </script>
 <script>

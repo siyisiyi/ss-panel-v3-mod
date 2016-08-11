@@ -30,7 +30,7 @@
 					<div class="panel">
 						<div class="panel-body">
 							<div id="log_chart" style="height: 300px; width: 100%;">
-							<script src="/assets/public/js/canvasjs.js"></script>
+							<script src="//cdn.bootcss.com/canvasjs/1.7.0/canvasjs.js"></script>
 							<script type="text/javascript">
 												window.onload = function () {
 													var log_chart = new CanvasJS.Chart("log_chart",

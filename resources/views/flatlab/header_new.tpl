@@ -34,10 +34,10 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse-7">
             <ul class="nav navbar-nav">
-                                    <li><a href="/">首页</a></li>
-                                    <li><a href="/tutorial">教程</a></li>
-                                    <li><a href="/price">价格</a></li>
-                                    <li><a href="/code">邀请</a></li>
+                                    <li><a href="/" class="home">首页</a></li>
+                                    <li><a href="/tutorial" id=tutorial>教程</a></li>
+                                    <li><a href="/price" id="price">价格</a></li>
+                                    <li><a href="/code" in="invite">邀请</a></li>
                             </ul>
             <div class="nav navbar-nav navbar-right">
                                     <ul class="nav navbar-nav navbar-right">

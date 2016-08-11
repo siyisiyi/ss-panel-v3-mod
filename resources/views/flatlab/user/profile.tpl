@@ -37,9 +37,6 @@
                                   <li>
                                       <a data-toggle="tab" href="#connectIP" aria-expanded="true">最近一天使用IP</a>
                                   </li>
-                                  <li class="">
-                                      <a data-toggle="tab" href="#FAQ" aria-expanded="false">FAQ</a>
-                                  </li>
                               </ul>
                           </header>
                           <div class="panel-body">
@@ -83,10 +80,6 @@
                                                     </table>
                                         </div>
                                   </div>
-                                  <div id="FAQ" class="tab-pane">
-                                    <p>流量不会重置，可以通过续命获取流量。</p>
-                                        <p>每次续命可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
-                                  </div>
                               </div>
                           </div>
                       </section>
@@ -113,7 +106,7 @@
 													{foreach $paybacks as $payback}
 														<tr>
 															<td><b>{$payback->id}</b></td>
-															<td>{$payback->user()->user_name}
+															<td>{if $payback->user()==null}已注销{else}{$payback->user()->user_name}{/if}
 															</td>
 															<td>{$payback->ref_get} 元</td>
 														</tr>
