@@ -42,6 +42,16 @@ class HomeController extends BaseController
     {
         return $this->view()->display('staff.tpl');
     }
+
+    public function price()
+    {
+        return $this->view()->display('price.tpl');
+    }
+
+    public function tutorial()
+    {
+        return $this->view()->display('tutorial.tpl');
+    }
 	
 	public function page404($request, $response, $args)
     {

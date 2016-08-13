@@ -126,23 +126,6 @@
                                                                 &nbsp;修改</button>
                                                             </div>
                                                             <!-- END CONTACT INFO -->
-                                                            <!-- THEME SETTING -->
-                                                            <div class="form-group">
-                                                                <h3>主题修改</h3>
-                                                                <p>当前主题：<label class="label label-primary"> {$user->theme}</label></p>
-                                                                <label class="floating-label" for="theme">主题</label>
-                                                                <select id="theme" class="form-control">
-                                                                    {foreach $themes as $theme}
-                                                                        <option value="{$theme}">{$theme}</option>
-                                                                    {/foreach}
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <button class="btn btn-info " id="theme-update" >
-                                                                <i class="fa fa-check-square-o"></i>
-                                                                &nbsp;修改</button>
-                                                            </div>
-                                                            <!-- END THEME SETTING -->
                                                             <!-- 2 STEP AUTH -->
                                                             <h3>两步验证</h3>
                                                             <p>请下载 Google 的两步验证器，扫描下面的二维码。</p>

@@ -76,6 +76,8 @@ $app->get('/code', 'App\Controllers\HomeController:code');
 $app->get('/tos', 'App\Controllers\HomeController:tos');
 $app->get('/staff', 'App\Controllers\HomeController:staff');
 $app->get('/gfwlistjs', 'App\Controllers\LinkController:GetGfwlistJs');
+$app->get('/price', 'App\Controllers\HomeController:price');
+$app->get('/tutorial', 'App\Controllers\HomeController:tutorial');
 
 
 // User Center

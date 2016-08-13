@@ -19,29 +19,30 @@
 					<h1 class="page-title">STAFF</h1>
 				</header>
 				<p>本程序参与人员列表。</p>
-				<p>此列表为参与到 <a href="https://github.com/glzjin/ss-panel-v3-mod">ss-panel-v3 glzjin mod {$config["version"]}</a> 中的人员，在此表示感谢。</p>
+				<p>此列表为参与到 <a href="https://github.com/glzjin/ss-panel-v3-mod" target="_blank">ss-panel-v3 glzjin mod {$config["version"]}</a> 中的人员，在此表示感谢。</p>
 				
 				<h3>原作</h3>
 				<div class="card"><div class="card-main"><div class="card-inner">
-				<p><a href="https://www.zhaoj.in">glzjin</a></p>
+				<p><a href="https://github.com/orvice/" target="_blank">orvice</a></p>
 				</div></div></div>
 
 				<h3>监督</h3>
 				<div class="card"><div class="card-main"><div class="card-inner">
-				<p><a href="https://www.zhaoj.in">glzjin</a></p>
+				<p><a href="https://www.zhaoj.in" target="_blank">glzjin</a></p>
 				</div></div></div>
 
 				<h3>作画</h3>
 				<div class="card"><div class="card-main"><div class="card-inner">
-				<p><a href="https://github.com/Daemonite/">Daemonite</a></p>
-				<p><a href="https://www.zhaoj.in">glzjin</a></p>
+				<p><a href="https://github.com/Daemonite/" target="_blank">Daemonite</a></p>
+				<p><a href="https://www.zhaoj.in" target="_blank">glzjin</a></p>
 				</div></div></div>
 
 				<h3>出演</h3>
 				<div class="card"><div class="card-main"><div class="card-inner">
-				<p><a href="https://www.zhaoj.in">glzjin</a></p>
-				<p><a href="http://mengyang.wang/">mengyang</a></p>
-				<p><a href="http://tony.ecy.ren/">tony</a></p>
+				<p><a href="https://www.zhaoj.in" target="_blank">glzjin</a></p>
+				<p><a href="http://mengyang.wang/" target="_blank">mengyang</a></p>
+				<p><a href="http://tony.ecy.ren/" target="_blank">tony</a></p>
+				<p><a href="https://siyi.me/" target="_blank">siyi</a></p>
 				</div></div></div>
 
 				<h3>鸣谢</h3>

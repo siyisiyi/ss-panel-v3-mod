@@ -140,7 +140,7 @@
                                                    <p>Mac OS X <a href="/downloads/client/ShadowsocksX.dmg">下载这个</a>，安装，然后下载<a href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>
                                                 </div>
                                                 <div class="tab-pane" id="tab_1_1_3">
-                                                    <p>Android <a href="/downloads/client/shadowsocks.apk">下载这个</a>，安装，然后在手机上默认浏览器中点击<a id="android_add">这个</a>，然后一直点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。(此方法还在测试中，可能会出现问题)</p>
+                                                    <p>Android <a href="/downloads/client/shadowsocks.apk">下载这个</a>，安装，然后在手机上默认浏览器中点击<a href="{$android_add}">这个</a>，然后一直点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。(此方法还在测试中，可能会出现问题)</p>
                                                 </div>
                                                 <div class="tab-pane" id="tab_1_1_4">
                                                     <p>iOS <a href="/link/{$ios_token}">下载这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p>
@@ -348,12 +348,6 @@ window.onload = function() {
             })
         })
     })
-	$("#android_add").click(function(){
-		var links = new Array({$android_add});
-		for(var i=0; i<links.length; i++){
-			window.open (links[i]);
-		}
-	});
 	
 </script>
 {else}
@@ -424,13 +418,6 @@ window.onload = function() {
 		product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
 		offline: {if $geetest_html->success}0{else}1{/if} // 表示用户后台检测极验服务器是否宕机，与SDK配合，用户一般不需要关注
 	}, handlerPopup);
-	
-	$("#android_add").click(function(){
-		var links = new Array({$android_add});
-		for(var i=0; i<links.length; i++){
-			window.open (links[i]);
-		}
-	});
 	
 </script>
 

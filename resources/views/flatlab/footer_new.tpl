@@ -17,6 +17,7 @@
                     <li><a href="/auth/register">注册</a></li>
                     <li><a href="/auth/login">登录</a></li>
                     {/if}
+                    <li><a href="http://www.miitbeian.gov.cn/" target="_blank">闽ICP备16017208号</a></li>
                 </ul>
                 <span class="pull-right" style="font-size: 14px;">&copy; 2016 <a href="/" style="font-weight: bold;">{$config["appName"]}.</a> Powered by <a href="/staff" style="font-weight: bold;">STAFF.</a></span>
             </div>

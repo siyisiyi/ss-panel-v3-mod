@@ -54,7 +54,7 @@
                                                 <div class="panel-heading">图形化客户端</div>
                                                 <div class="panel-body">
                                                     <p>推荐使用此客户端</p>
-                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/client/ShadowsocksR-win.7z'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
+                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/client/ShadowsocksR-win-3.8.4.2e.7z'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
                                                     <p class="text-success" style="display:none; margin-top: 20px">正在处理下载请求，请稍后</p>
                                                 </div>
                                             </div>
@@ -149,9 +149,8 @@
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">APK</div>
                                                 <div class="panel-body">
-                                                    <p>
-                                                        <a href="http://7xrzkh.com1.z0.glb.clouddn.com/shadowsocks-andriod-client-2.9.10.apk" class="btn btn-primary" target="_blank">下载客户端</a>
-                                                    </p>
+                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/client/ssr_3.0.2.2.apk'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
+                                                    <p class="text-success" style="display:none; margin-top: 20px">正在处理下载请求，请稍后</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -176,6 +175,10 @@
                                                 <div class="panel-body">
                                                     <p>请使用Safari打开以下链接:</p>
                                                     <ul>
+                                                        <li><a href="https://itunes.apple.com/cn/app/potatso-yi-jian-shi-pin-app/id1070901416?mt=8"
+                                                               class="btn btn-primary" target="_blank">Potatso</a></li>
+                                                    </ul>
+                                                    <ul>
                                                         <li><a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8"
                                                                class="btn btn-primary" target="_blank">ShadowRocket</a></li>
                                                     </ul>
@@ -195,7 +198,8 @@
                                                         <a href="http://apt.thebigboss.org/onepackage.php?bundleid=com.linusyang.shadowsocks" class="btn btn-primary" target="_blank">ShadowSocks</a>
                                                     </p>
                                                     <p>PP助手：</p>
-                                                    <p><a href="https://v.gosiyi.com/downloads/Surge_pp.ipa" target="_blank" class="btn btn-primary">Surge</a></p>
+                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/Surge_pp.ipa'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
+                                                    <p class="text-success" style="display:none; margin-top: 20px">正在处理下载请求，请稍后</p>
                                                 </div>
                                             </div>
                                         </div>
