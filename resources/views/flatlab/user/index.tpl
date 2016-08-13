@@ -138,6 +138,37 @@
                 <!-- end left hand side -->
                 <!-- 2nd column-->
                 <div class="col-md-4">
+                    <!-- start carousel notice -->
+                    <section class="panel">
+                          <div id="c-slide" class="carousel slide auto panel-body">
+                              <ol class="carousel-indicators out">
+                                  <li class="" data-slide-to="0" data-target="#c-slide"></li>
+                                  <li class="" data-slide-to="1" data-target="#c-slide"></li>
+                                  <li class="active" data-slide-to="2" data-target="#c-slide"></li>
+                              </ol>
+                              <div class="carousel-inner">
+                                  <div class="item text-center">
+                                      <h3>加入Telegram群，聊天吹水！</h3>
+                                      <small class="text-muted"><a href="https://telegram.me/joinchat/D-9Hsgaw1zb9d1zesF2jnA" target="_blank">点击加入</a></small>
+                                  </div>
+                                  <div class="item text-center">
+                                      <h3>关注GoSiyi SS频道，获得最新公告</h3>
+                                      <small class="text-muted"><a href="https://telegram.me/joinchat/D-9HskB2CzrfpV0zRVNiZQ" target="_blank">点击加入</a></small>
+                                  </div>
+                                  <div class="item text-center active">
+                                      <h3>有问题问管理员</h3>
+                                      <small class="text-muted">wx: c159800221</small>
+                                  </div>
+                              </div>
+                              <a data-slide="prev" href="#c-slide" class="left carousel-control">
+                                  <i class="fa fa-angle-left"></i>
+                              </a>
+                              <a data-slide="next" href="#c-slide" class="right carousel-control">
+                                  <i class="fa fa-angle-right"></i>
+                              </a>
+                          </div>
+                      </section>
+                      <!-- end carousel notice -->
                     <!-- account info -->
                     <aside class="profile-nav alt green-border">
                               <section class="panel">
@@ -153,7 +184,17 @@
                                     <li><a href="javascript:;"> <i class="fa fa-sitemap"></i> 连接端口 <span class="label label-default pull-right r-activity">{$user->port}</span></a></li>
                                     <li><a href="javascript:;"> <i class="fa fa-lock"></i> 连接密码 <span class="label label-danger pull-right r-activity">{$user->passwd}</span></a></li>
                                     <li><a href="javascript:;"> <i class="fa fa-calendar"></i> 上次使用 <span class="label label-success pull-right r-activity">{$user->lastSsTime()}</span></a></li>
-                                      <li><a href="javascript:;"> <i class="fa fa-trophy"></i> 账号等级 <span class="label label-primary pull-right r-activity">{$user->class}</span></a></li>
+                                      <li><a href="javascript:;"> <i class="fa fa-trophy"></i> 账号等级 <span class="label label-primary pull-right r-activity">
+                                      {if $user->class ==0}
+                                      免费用户
+                                      {/if}
+                                      {if $user->class ==1}
+                                      付费用户
+                                      {/if}
+                                      {if $user->class >=2}
+                                      VIP用户
+                                      {/if}
+                                      </span></a></li>
                                       <li><a href="javascript:;"> <i class="fa fa-tags"></i> 等级过期时间 <span class="label label-info pull-right r-activity">{$user->class_expire}</span></a></li>
                                       <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> 账号过期时间 <span class="label label-warning pull-right r-activity">{$user->expire_in}</span></a></li>
                                       <li><a href="javascript:;"> <i class="fa fa-truck"></i> 速度限制 <span class="label label-danger pull-right r-activity">

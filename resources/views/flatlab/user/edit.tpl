@@ -227,12 +227,9 @@
                                                             <!-- PROTOCOL -->
                                                             <h3>RSS 协议&混淆设置</h3>
                                                             <p>当前协议：<label class="label label-primary"> {$user->protocol}</label></p>
-                                                            <p>当前协议参数：<label class="label label-primary"> {$user->protocol_param}</label></p>
                                                             <div class="alert alert-block alert-warning fade in">
                                                                 <button type="button" class="close" data-dismiss="alert"></button>
                                                                 <p><i class="fa fa-warning"></i>&nbsp;注意：如果需要兼容原版SS请选择带_compatible的兼容选项！</p>
-                                                                <p> <i class="fa fa-warning"></i>&nbsp;注意：参数请放空，除非你看得懂<a href="https://github.com/breakwa11/shadowsocks-rss/blob/master/ssr.md">这里</a>！
-                                                                </p>
                                                             </div>
                                                             <div class="form-group form-group-label">
                                                                 <label class="floating-label" for="protocol">协议</label>
@@ -251,7 +248,6 @@
                                                             </div>
                                                             
                                                             <p>当前混淆方式：<label class="label label-primary"> {$user->obfs}</label></p>
-                                                            <p>当前混淆参数：<label class="label label-primary"> {$user->obfs_param}</label></p>
                                                             <div class="form-group form-group-label">
                                                                 <label class="floating-label" for="obfs">混淆方式</label>
                                                                 <select id="obfs" class="form-control">
