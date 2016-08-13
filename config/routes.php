@@ -76,8 +76,12 @@ $app->get('/code', 'App\Controllers\HomeController:code');
 $app->get('/tos', 'App\Controllers\HomeController:tos');
 $app->get('/staff', 'App\Controllers\HomeController:staff');
 $app->get('/gfwlistjs', 'App\Controllers\LinkController:GetGfwlistJs');
+<<<<<<< HEAD
 $app->get('/price', 'App\Controllers\HomeController:price');
 $app->get('/tutorial', 'App\Controllers\HomeController:tutorial');
+=======
+$app->post('/telegram_callback', 'App\Controllers\HomeController:telegram');
+>>>>>>> 38f9f74a28b419563e62d6b25875a204c5146eb9
 
 
 // User Center
