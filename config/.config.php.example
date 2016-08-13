@@ -258,11 +258,8 @@ $System_Config['enable_auto_clean_unused_days']='30';
 
 #是否夹带统计代码，自己在 resources/views/{主题名} 下创建一个 analytics.tpl ，如果有必要就用 literal 界定符
 $System_Config['enable_analytics_code']='false';
-<<<<<<< HEAD
+
 $System_Config['enable_alipay']='true';
-
-=======
-
 
 #支付宝接口，spay.swapteam.cn，使用此接口的一切后果与本人无关
 $System_Config['enable_alipay']='true';
@@ -273,14 +270,8 @@ $System_Config['alipay_id']='';
 #安全密钥
 $System_Config['alipay_key']='';
 
->>>>>>> e9f6d431a8f30ebab51d0f4f8f8e78f5d14bf484
 #是否启用捐赠相关功能
 $System_Config['enable_donate']='true';
-
-
-
-
-
 
 #telegram bot,是否启用
 $System_Config['enable_telegram']='false';

@@ -206,10 +206,6 @@ class HomeController extends BaseController
 			echo 'error';
 		}
     }
-<<<<<<< HEAD
-	
-	
-	
 	
 	public function alipay_callback($request, $response, $args)
     {
@@ -367,7 +363,4 @@ class HomeController extends BaseController
 			}
 		}
 	}
-=======
->>>>>>> 38f9f74a28b419563e62d6b25875a204c5146eb9
-
 }
