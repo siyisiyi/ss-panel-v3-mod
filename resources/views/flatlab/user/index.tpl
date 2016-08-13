@@ -113,6 +113,7 @@
                               </div>
                               <div class="panel-body">
                                   <div class="row">
+                                  {if $user->transfer_enable != 0}
                                       <div class="col-lg-7 col-sm-7 text-center">
                                           <div class="easy-pie-chart">
                                               <div class="percentage" data-percent="{number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}"><span></span>{number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}%</div>
@@ -128,6 +129,7 @@
                                               <span>已用: {$user->LastusedTraffic()}</span>
                                           </div>
                                       </div>
+                                  {/if}
                                   </div>
                               </div>
                           </section>

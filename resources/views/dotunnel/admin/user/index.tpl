@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="col-lg-12 col-lg-push-0 col-sm-10 col-sm-push-1">
+			<div class="col-lg-12 col-sm-12">
 				<section class="content-inner margin-top-no">
 					
 					<div class="card">
@@ -103,7 +103,14 @@
 								Google+
 								{/if}
 								
-								{$user->im_value}</th>
+								{if $user->im_type==4}
+								Telegram
+								{/if}
+								{if $user->im_type==4}
+								<a href="https://telegram.me/{$user->im_value}">{$user->im_value}</a>
+								{else}
+								{$user->im_value}
+								{/if}</th>
 								<th>{$user->reg_date}<br>{$user->reg_ip}　{$regloc[$user->id]}</th>
                                 <th>{$user->ref_by}</th>
                                 

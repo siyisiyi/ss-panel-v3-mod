@@ -48,6 +48,7 @@
 										<option value="1">微信</option>
 										<option value="2">QQ</option>
 										<option value="3">Google+</option>
+                                        <option value="4">Telegram</option>
 								</select>
 								</div>
                                 <div class="form-group has-feedback">

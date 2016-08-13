@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="col-lg-12 col-lg-push-0 col-sm-10 col-sm-push-1">
+			<div class="col-lg-12 col-sm-12">
 				<section class="content-inner margin-top-no">
 					
 					<div class="card">
@@ -58,6 +58,7 @@
 								<th>时间</th>
 							</tr>
 							{foreach $logs as $log}
+								{if $log->node()!=null}
 								<tr>
 									<td>#{$log->id}</td>
 									<td>{$log->node()->id}</td>
@@ -66,6 +67,7 @@
 									<td>{$loc[$log->ip]}</td>
 									<td>{$log->time()}</td>
 								</tr>
+								{/if}
 							{/foreach}
 						</table>
                         {$logs->render()}

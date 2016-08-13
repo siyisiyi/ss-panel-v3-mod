@@ -239,6 +239,9 @@
                                                                 {if $user->im_type==3}
                                                                 Google+
                                                                 {/if}
+                                                                {if $user->im_type==4}
+                                                                Telegram
+                                                                {/if}
                                                                 {$user->im_value}
                                                                 </p>
                                                                 <select class="form-control" id="imtype">
@@ -247,6 +250,7 @@
                                                                     <option value="1">微信</option>
                                                                     <option value="2">QQ</option>
                                                                     <option value="3">Google+</option>
+                                                                    <option value="4">Telegram</option>
                                                                 </select>
                                                             </div>
                                                             <div class="form-group">
@@ -380,7 +384,7 @@
                                                             <p>当前协议参数：{$user->protocol_param}</p>
                                                             <div class="alert alert-block alert-warning fade in">
                                                                 <button type="button" class="close" data-dismiss="alert"></button>
-                                                                <p><i class="fa fa-warning"></i>&nbsp;注意：如果需要在手机使用SS请选择带_compatible的兼容选项！</p>
+                                                                <p><i class="fa fa-warning"></i>&nbsp;注意：如果需要兼容原版SS请选择带_compatible的兼容选项！</p>
                                                                 <p> <i class="fa fa-warning"></i>&nbsp;注意：参数请放空，除非你看得懂<a href="https://github.com/breakwa11/shadowsocks-rss/blob/master/ssr.md">这里</a>！
                                                                 </p>
                                                             </div>
@@ -400,10 +404,6 @@
                                                                 </select>
                                                             </div>
                                                             
-                                                            <div class="form-group form-group-label">
-                                                                <label class="floating-label" for="protocol_param">协议参数</label>
-                                                                <input class="form-control" id="protocol_param" type="text">
-                                                            </div>
                                                             <p>当前混淆方式：{$user->obfs}</p>
                                                             <p>当前混淆参数：{$user->obfs_param}</p>
                                                             <div class="form-group form-group-label">
@@ -423,10 +423,6 @@
                                                                 </select>
                                                             </div>
                                                             
-                                                            <div class="form-group form-group-label">
-                                                                <label class="floating-label" for="obfs_param">混淆参数</label>
-                                                                <input class="form-control" id="obfs_param" type="text">
-                                                            </div>
                                                             <div class="form-group">
                                                                 <button class="btn btn-sm blue" id="rss-update" ><i class="fa fa-check-square-o">check</i>&nbsp;修改</button>
                                                             </div>
@@ -621,9 +617,7 @@
                 dataType: "json",
                 data: {
                     protocol: $("#protocol").val(),
-					protocol_param: $("#protocol_param").val(),
-					obfs: $("#obfs").val(),
-					obfs_param: $("#obfs_param").val()
+					          obfs: $("#obfs").val()
                 },
                 success: function (data) {
                     if (data.ret) {
