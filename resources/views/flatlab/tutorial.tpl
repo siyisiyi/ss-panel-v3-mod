@@ -84,9 +84,8 @@
                                                 <div class="panel-heading">客户端</div>
                                                 <div class="panel-body">
                                                     <p>图形化客户端:</p>
-                                                    <ul>
-                                                        <li><a href="http://7xrzkh.com1.z0.glb.clouddn.com/ShadowsocksX-MAC-client-2.6.3.dmg" class="btn btn-primary">下载客户端</a></li>
-                                                    </ul>
+                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/client/ShadowsocksX-R.134.zip'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
+                                                    <p class="text-success" style="display:none; margin-top: 20px">正在处理下载请求，请稍后</p>
                                                     <p>命令行客户端</p>
                                                     <ul>
                                                         <li><code>brew install shadowsocks-libev</code></li>

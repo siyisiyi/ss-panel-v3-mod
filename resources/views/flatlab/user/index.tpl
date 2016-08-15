@@ -142,12 +142,12 @@
                     <section class="panel">
                           <div id="c-slide" class="carousel slide auto panel-body">
                               <ol class="carousel-indicators out">
-                                  <li class="" data-slide-to="0" data-target="#c-slide"></li>
+                                  <li class="active" data-slide-to="0" data-target="#c-slide"></li>
                                   <li class="" data-slide-to="1" data-target="#c-slide"></li>
-                                  <li class="active" data-slide-to="2" data-target="#c-slide"></li>
+                                  <li class="" data-slide-to="2" data-target="#c-slide"></li>
                               </ol>
                               <div class="carousel-inner">
-                                  <div class="item text-center">
+                                  <div class="item text-center active">
                                       <h3>加入Telegram群，聊天吹水！</h3>
                                       <small class="text-muted"><a href="https://telegram.me/joinchat/D-9Hsgaw1zb9d1zesF2jnA" target="_blank">点击加入</a></small>
                                   </div>
@@ -155,7 +155,7 @@
                                       <h3>关注GoSiyi SS频道，获得最新公告</h3>
                                       <small class="text-muted"><a href="https://telegram.me/joinchat/D-9HskB2CzrfpV0zRVNiZQ" target="_blank">点击加入</a></small>
                                   </div>
-                                  <div class="item text-center active">
+                                  <div class="item text-center">
                                       <h3>有问题问管理员</h3>
                                       <small class="text-muted">wx: c159800221</small>
                                   </div>
@@ -173,7 +173,7 @@
                     <aside class="profile-nav alt green-border">
                               <section class="panel">
                                   <div class="user-heading alt green-bg">
-                                      <a href="https://en.gravatar.com/emails/">
+                                      <a href="https://en.gravatar.com/emails/" target="_blank">
                                           <img alt="gravatar" src="{$user->gravatar}}">
                                       </a>
                                       <h1>{$user->user_name}</h1>
@@ -219,16 +219,16 @@
                               <div class="flat-carousal">
                                   <div id="owl-demo" class="owl-carousel owl-theme tab-content">
                                       <div role="tabpanel" class="item tab-pane active" id="windows">
-                                          <h1>Windows <a class="downloads" href="/downloads/client/ShadowsocksR-win.7z">下载这个</a>，解压，然后下载<a class="downloads" href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC为绕过国内IP，然后开启系统代理即可上网。</h1>
+                                          <h1>Windows <a class="downloads" href="/downloads/client/ShadowsocksR-win-3.8.4.2e.zip">下载这个</a>，解压，然后下载<a class="downloads" href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC为绕过国内IP，然后开启系统代理即可上网。</h1>
                                       </div>
                                       <div role="tabpanel" class="item tab-pane" id="mac">
-                                          <h1>Mac OS X <a class="downloads" href="/downloads/client/ShadowsocksX.dmg">下载这个</a>，安装，然后下载<a class="downloads" href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</h1>
+                                          <h1>Mac OS X <a class="downloads" href="/downloads/client/ShadowsocksX-R.134.zip">下载这个</a>安装，运行程序，然后前往<a class="downloads" href="user/node" target="_blank">节点列表</a>查看节点二维码，使用软件扫描二维码添加服务器后代理选择更新PAC为绕过国内模式即可上网</h1>
                                       </div>
                                       <div role="tabpanel" class="item tab-pane" id="android">
-                                          <h1>Android <a class="downloads" href="/downloads/client/shadowsocks.apk">下载这个</a>，安装，然后在手机上默认浏览器中点击<a class="downloads" href="{$android_add}">这个</a>，然后一直点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。(此方法还在测试中，可能会出现问题)</h1>
+                                          <h1>Android <a class="downloads" href="/downloads/client/ssr_3.0.2.2.apk">下载这个</a>，安装，然后在手机上默认浏览器中点击<a class="downloads" href="{$android_add}">这个</a>，然后一直点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。(此方法还在测试中，可能会出现问题)</h1>
                                       </div>
                                       <div role="tabpanel" class="item tab-pane" id="ios">
-                                          <h1>iOS <a class="downloads" href="/link/{$ios_token}">下载这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</h1>
+                                          <h1>iOS <a class="downloads" href="https://itunes.apple.com/cn/app/potatso-yi-jian-shi-pin-app/id1070901416?mt=8" target="_blank">购买这个</a>或者<a href="https://itunes.apple.com/cn/app/shadowrocket-for-shadowsocks/id932747118" target="_blank" class="downloads">这个</a>，觉得贵就淘宝一个，然后扫描二维码或者手动输入服务器信息即可</h1>
                                       </div>
                                   </div>
                               </div>
@@ -462,7 +462,7 @@ window.onload = function() {
     }, int_speed);
 }
 
-countUp(184);
+countUp({$userCount});
 
 function countUp2(count)
 {
@@ -485,7 +485,7 @@ function countUp2(count)
     }, int_speed);
 }
 
-countUp2(8);
+countUp2({$nodeCount});
 
 function countUp3(count)
 {

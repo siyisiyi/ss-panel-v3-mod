@@ -9,6 +9,7 @@
 	<script src="//cdn.bootcss.com/jquery-validate/1.15.0/jquery.validate.min.js"></script>
 	<script src="/theme/material/js/base.min.js"></script>
 	<script src="/theme/material/js/project.min.js"></script>
+	<script src="//s4.cnzz.com/z_stat.php?id=1260143745&web_id=1260143745" language="JavaScript"></script>
 	
 </body>
 </html>

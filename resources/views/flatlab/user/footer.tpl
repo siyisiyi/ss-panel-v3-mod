@@ -23,6 +23,7 @@
     <!--common script for all pages-->
     <script src="/theme/flatlab/js/common-scripts.js"></script>
     <script src="/theme/flatlab/js/addActiveClass.js"></script>
+    <script src="//s4.cnzz.com/z_stat.php?id=1260143745&web_id=1260143745" language="JavaScript"></script>
 
 
 

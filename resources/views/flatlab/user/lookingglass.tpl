@@ -16,7 +16,6 @@
             <!-- page start-->
             <h2 class="page-title"><i class="icon-magnifier"></i>&nbsp;观察窗 | <small>Monitor</small></h2>
 
-            <div class="row">
 
             <div class="col-lg-10 col-lg-offset-1">
 	                        	<div class="alert alert-block alert-warning fade in">
@@ -29,8 +28,6 @@
 	                            </div>
 	                        </div>
             	
-            </div>
-
 			<div class="col-lg-10 col-lg-offset-1">
 				<div class="panel">
 					<div class="panel-body text-center">

@@ -34,7 +34,7 @@
       <!--header start-->
       <header class="header white-bg">
           <div class="sidebar-toggle-box">
-              <div data-original-title="Toggle Navigation" data-placement="right" class="fa fa-bars tooltips"></div>
+              <div data-placement="right" class="fa fa-bars tooltips"></div>
           </div>
           <!--logo start-->
           <a href="/" class="logo" >Go<span>SIYI</span></a>

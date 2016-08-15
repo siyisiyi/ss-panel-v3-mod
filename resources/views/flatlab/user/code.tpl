@@ -26,8 +26,8 @@
 	                                    </p>
 	                            </div>
 	                        </div>
-			<div class="col-lg-10 col-lg-offset-1">
-				<div class="col-md-6">
+			
+				<div class="col-md-5 col-md-offset-1">
 
 					{if $enable_alipay != 'false'}
 					<!-- Alipay -->
@@ -55,7 +55,7 @@
 					{/if}
 				</div>
 				<!-- reload code -->
-				<div class="col-md-6">
+				<div class="col-md-5">
 					<section class="panel">
 	                                  <div class="twt-feed" style="background-color:#78CD51;">
 	                                      <h1>充值码充值</h1>
@@ -78,6 +78,7 @@
 	                              </section>
 				</div>
 				<!-- end reload code -->
+			<div class="col-lg-10 col-lg-offset-1">
 				<div class="row">
 					{if $pmw!='0'}
 							<!-- PMW HISTORY -->

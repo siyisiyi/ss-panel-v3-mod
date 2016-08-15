@@ -83,6 +83,9 @@ class UserController extends BaseController
 				$android_add .= $ssqr."|";
 			}
 		}
+		$nodeList=Node::where('sort', 0)->get();
+		$nodeCount = count($nodeList);
+		$userCount=User::count();
 		
 		$ios_token = LinkController::GenerateIosCode("smart",0,$this->user->id,0,"smart");
 		
@@ -100,7 +103,7 @@ class UserController extends BaseController
 		$Ann = Ann::orderBy('date', 'desc')->first();
 		
 		
-        return $this->view()->assign('ann',$Ann)->assign('geetest_html',$GtSdk)->assign("ios_token",$ios_token)->assign("android_add",$android_add)->assign('enable_duoshuo',Config::get('enable_duoshuo'))->assign('duoshuo_shortname',Config::get('duoshuo_shortname'))->assign('baseUrl',Config::get('baseUrl'))->display('user/index.tpl');
+        return $this->view()->assign('ann',$Ann)->assign('geetest_html',$GtSdk)->assign("ios_token",$ios_token)->assign("android_add",$android_add)->assign('enable_duoshuo',Config::get('enable_duoshuo'))->assign('duoshuo_shortname',Config::get('duoshuo_shortname'))->assign('baseUrl',Config::get('baseUrl'))->assign('nodeCount',$nodeCount)->assign('userCount',$userCount)->display('user/index.tpl');
     }
 	
 	

@@ -24,11 +24,10 @@
         </div>
     </div>
 </div>
-<script type="application/javascript" src="/theme/flatui/js/vendor/jquery.min.js"></script>
-<script type="application/javascript" src="/theme/flatui/js/flat-ui.js"></script>
-<script type="application/javascript" src="/theme/flatui/js/addActiveClass.js"></script>
-<!-- <script type="application/javascript" src="/theme/flatui/js/application.js"></script> -->
-<!-- <script type="application/javascript" src="/theme/flatui/js/prettify.js"></script> -->
+<script src="/theme/flatui/js/vendor/jquery.min.js"></script>
+<script src="/theme/flatui/js/flat-ui.js"></script>
+<script src="/theme/flatui/js/addActiveClass.js"></script>
+<script src="https://s4.cnzz.com/z_stat.php?id=1260143745&web_id=1260143745" language="JavaScript"></script>
 
 {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
 
@@ -36,7 +35,7 @@
 <script type="text/javascript">
 	try{
 		if(window.console && window.console.log)
-			console.log("偶然\n\n徐志摩\n\n我是天空里的一片云，\n偶尔投影在你的波心——\n你不必讶异，\n更无须欢喜——\n在转瞬间消灭了踪影。\n你我相逢在黑夜的海上，\n你有你的，我有我的，方向；\n你记得也好，\n最好你忘掉，\n在这交会时互放的光亮！\n","\nHey man! There is nothing here now.\nClick the moom to go back!\nwang@siyi.me\n\n");
+			console.log("偶然\n\n徐志摩\n\n我是天空里的一片云，\n偶尔投影在你的波心——\n你不必讶异，\n更无须欢喜——\n在转瞬间消灭了踪影。\n你我相逢在黑夜的海上，\n你有你的，我有我的，方向；\n你记得也好，\n最好你忘掉，\n在这交会时互放的光亮！\n");
 	}catch(e){
 	}
 </script>
