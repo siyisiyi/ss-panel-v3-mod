@@ -24,10 +24,10 @@
         </div>
     </div>
 </div>
+<div class="hide"><script src="https://s4.cnzz.com/z_stat.php?id=1260143745&web_id=1260143745" language="JavaScript"></script></div>
 <script src="/theme/flatui/js/vendor/jquery.min.js"></script>
 <script src="/theme/flatui/js/flat-ui.js"></script>
 <script src="/theme/flatui/js/addActiveClass.js"></script>
-<script src="https://s4.cnzz.com/z_stat.php?id=1260143745&web_id=1260143745" language="JavaScript"></script>
 
 {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
 

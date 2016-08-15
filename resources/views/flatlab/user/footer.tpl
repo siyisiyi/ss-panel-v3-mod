@@ -10,6 +10,7 @@
       </footer>
       <!--footer end-->
   </section>
+  <div class="hide"><script src="//s4.cnzz.com/z_stat.php?id=1260143745&web_id=1260143745" language="JavaScript"></script></div>
 
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="/theme/flatlab/js/jquery.js"></script>
@@ -23,7 +24,6 @@
     <!--common script for all pages-->
     <script src="/theme/flatlab/js/common-scripts.js"></script>
     <script src="/theme/flatlab/js/addActiveClass.js"></script>
-    <script src="//s4.cnzz.com/z_stat.php?id=1260143745&web_id=1260143745" language="JavaScript"></script>
 
 
 
