@@ -25,39 +25,37 @@
 			<section class="content-inner margin-top-no">
 				<div class="row">
 				
-					
+					{if $enable_alipay != 'false'}
 					<div class="col-lg-12 col-md-12">
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
-									<form action="/alipay/alipayapi.php" method="post" target="_blank">
 									<div class="card-inner">
-										<p class="card-heading">支付宝在线充值</p>
-										<p>当前余额：{$user->money} 元</p>
+										<p class="card-heading">支付宝充值</p>
 										<div class="form-group form-group-label">
-											<label class="floating-label" for="WIDtotal_fee">金额 （最小充值金额1.00元）</label>
-											<input class="form-control" name="email" type="hidden" value="{$user->email}">
-											<input class="form-control" type="text" name="WIDtotal_fee" value="" placeholder="最低金额：1.00元">
+											<label class="floating-label" for="amount">充值金额</label>
+											<input class="form-control" id="amount" type="text">
 										</div>
 									</div>
 									<div class="card-action">
 										<div class="card-action-btn pull-left">
-											<button class="btn btn-flat waves-attach" type="submit" ><span class="icon">check</span>&nbsp;前往支付</button>
+											<button class="btn btn-flat waves-attach" id="alipay-update" ><span class="icon">check</span>&nbsp;提交</button>
 										</div>
-									</div></form>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					{/if}
 					
-
+					
 					<div class="col-lg-12 col-md-12">
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
 									<div class="card-inner">
-										<p class="card-heading">充值码充值</p>
-										<p>购买充值码请加微信：<a href="" data-toggle="modal" data-target=".bs-example-modal-sm">C159800221</a>(备注老司机)</p>
+										<p class="card-heading">充值码</p>
+										<p>当前余额：{$user->money} 元</p>
 										<div class="form-group form-group-label">
 											<label class="floating-label" for="code">充值码</label>
 											<input class="form-control" id="code" type="text">
@@ -93,7 +91,6 @@
 							<div class="card-main">
 								<div class="card-inner">
 									<div class="card-inner">
-										<p class="card-heading">充值记录</p>
 										<div class="card-table">
 											<div class="table-responsive">
 												{$codes->render()}
@@ -107,41 +104,37 @@
 														
 													</tr>
 													{foreach $codes as $code}
-														<tr>
-															<td>#{$code->id}</td>
-															<td>{$code->code}</td>
-															{if $code->type==-1}
-															<td>金额充值</td>
-															{/if}
-															{if $code->type==-2}
-															<td>支付宝充值</td>
-															{/if}
-															{if $code->type==-3}
-															<td>微信充值</td>
-															{/if}
-															{if $code->type==10001}
-															<td>流量充值</td>
-															{/if}
-															{if $code->type==10002}
-															<td>用户续期</td>
-															{/if}
-															{if $code->type>=1&&$code->type<=10000}
-															<td>等级续期 - 等级{$code->type}</td>
-															{/if}
-															{if $code->type<=0}
-															<td>充值 {$code->number} 元</td>
-															{/if}
-															{if $code->type==10001}
-															<td>充值 {$code->number} GB 流量</td>
-															{/if}
-															{if $code->type==10002}
-															<td>延长账户有效期 {$code->number} 天</td>
-															{/if}
-															{if $code->type>=1&&$code->type<=10000}
-															<td>延长等级有效期 {$code->number} 天</td>
-															{/if}
-															<td>{$code->usedatetime}</td>
-														</tr>
+														{if $code->type!=-2}
+															<tr>
+																<td>#{$code->id}</td>
+																<td>{$code->code}</td>
+																{if $code->type==-1}
+																<td>金额充值</td>
+																{/if}
+																{if $code->type==10001}
+																<td>流量充值</td>
+																{/if}
+																{if $code->type==10002}
+																<td>用户续期</td>
+																{/if}
+																{if $code->type>=1&&$code->type<=10000}
+																<td>等级续期 - 等级{$code->type}</td>
+																{/if}
+																{if $code->type==-1}
+																<td>充值 {$code->number} 元</td>
+																{/if}
+																{if $code->type==10001}
+																<td>充值 {$code->number} GB 流量</td>
+																{/if}
+																{if $code->type==10002}
+																<td>延长账户有效期 {$code->number} 天</td>
+																{/if}
+																{if $code->type>=1&&$code->type<=10000}
+																<td>延长等级有效期 {$code->number} 天</td>
+																{/if}
+																<td>{$code->usedatetime}</td>
+															</tr>
+														{/if}
 													{/foreach}
 												</table>
 												{$codes->render()}
@@ -159,14 +152,6 @@
 			</section>
 		</div>
 	</main>
-
-	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content" style="width:300px; height:300px;">
-      <img src="/theme/progressus/assets/images/wechat-qrcode.png" alt="QR-Code" style="height:300px; " />
-    </div>
-  </div>
-</div>
 
 
 
@@ -191,9 +176,11 @@
                     if (data.ret) {
                         $("#result").modal();
 						$("#msg").html(data.msg);
+						window.setTimeout("location.href=window.location.href", {$config['jump_delay']});
                     } else {
                         $("#result").modal();
 						$("#msg").html(data.msg);
+						window.setTimeout("location.href=window.location.href", {$config['jump_delay']});
                     }
                 },
                 error: function (jqXHR) {
@@ -202,9 +189,25 @@
                 }
             })
         })
-    })
+		
+		
+		{if $enable_alipay != 'false'}
+		function alipay(){
+			window.location="/user/alipay/"+$("#amount").val();
+		}
+		
+		$("#alipay-update").click(function(){
+			if($("#amount").val()!="")
+			{
+				alipay();
+			}
+		})
+		
+		
+		
+		{/if}
 	
-	timestamp = Date.parse(new Date())/1000; 
+	timestamp = {time()}; 
 		
 		
 	function f(){
@@ -217,14 +220,16 @@
 			},
 			success: function (data) {
 				if (data.ret) {
+					clearTimeout(tid);
 					$("#result").modal();
-					$("#msg").html("充值成功！ 五秒后刷新页面");
-					window.setTimeout("location.href=window.location.href", 5000);
+					$("#msg").html("充值成功！");
+					window.setTimeout("location.href=window.location.href", {$config['jump_delay']});
 				}
 			}
 		});
-		setTimeout(f, 1000); //循环调用触发setTimeout
+		tid = setTimeout(f, 1000); //循环调用触发setTimeout
 	}
 	setTimeout(f, 1000);
+})
 </script>
 

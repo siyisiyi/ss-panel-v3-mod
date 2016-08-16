@@ -21,110 +21,21 @@
 		<div class="container">
 			<section class="content-inner margin-top-no">
 				<div class="ui-card-wrap">
-					
-						<div class="col-lg-6 col-md-6">
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">公告</p>
-										<div class="card-table">
-											<div class="table-responsive">
-												<table class="table">
-													<tr>
-														<th>ID</th>
-														<th>日期</th>
-														<th>内容</th>
-													</tr>
-													{foreach $anns as $ann}
-														<tr>
-															<td>#{$ann->id}</td>
-															<td>{$ann->date}</td>
-															<td>{$ann->content}</td>
-														</tr>
-													{/foreach}
-												</table>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-							</div>
-							
-						
-						
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">最近一天使用IP</p>
-										<p>请确认都为自己的IP，如有异常请及时修改连接密码。部分节点不支持记录。</p>
-										<div class="card-table">
-											<div class="table-responsive">
-												<table class="table">
-													<tr>
-														
-														<th>IP</th>
-														<th>归属地</th>
-													</tr>
-													{foreach $userip as $single=>$location}
-														<tr>
-															
-															<td>{$single}</td>
-															<td>{$location}</td>
-														</tr>
-													{/foreach}
-												</table>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-							</div>
-							
-						
-						
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">最近10次登录IP</p>
-										<p>请确认都为自己的IP，如有异常请及时修改密码。</p>
-										<div class="card-table">
-											<div class="table-responsive">
-												<table class="table">
-													<tr>
-														
-														<th>IP</th>
-														<th>归属地</th>
-													</tr>
-													{foreach $userloginip as $single=>$location}
-														<tr>
-															
-															<td>{$single}</td>
-															<td>{$location}</td>
-														</tr>
-													{/foreach}
-												</table>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-							</div>
-						
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">FAQ</p>
-										<p>流量不会重置，可以通过续命获取流量。</p>
-
-										<p>每次续命可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
-									</div>
-									
-								</div>
-							</div>
-							
-						</div>
 						
 						<div class="col-lg-6 col-md-6">
+						
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading">系统中最新公告</p>
+										<p>其他公告请到<a href="/user/announcement"/>公告面板</a>查看。</p>
+										{if $ann != null}
+										<p>{$ann->content}</p>
+										{/if}
+									</div>
+									
+								</div>
+							</div>
 						
 							<div class="card">
 								<div class="card-main">
@@ -134,7 +45,7 @@
 										<p><a href="/downloads/client/ShadowsocksR-win.7z"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows下载这个</a>，解压，然后下载<a href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC为绕过国内IP，然后开启系统代理即可上网。</p>
 										<!--<p><a href="/downloads/client/ShadowsocksX.dmg"><i class="icon icon-lg">laptop_mac</i>&nbsp;Mac OS X下载这个</a>，安装，然后下载<a href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>-->
 										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 下载<a href="/link/{$ios_token}">这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p>
-										<p><a href="/downloads/client/shadowsocks.apk"><i class="icon icon-lg">android</i>&nbsp;Android下载这个</a>，安装，然后在手机上默认浏览器中点击<a id="android_add">这个</a>，然后一直点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。(此方法还在测试中，可能会出现问题)</p>
+										<p><a href="https://github.com/glzjin/shadowsocks-android/releases"><i class="icon icon-lg">android</i>&nbsp;Android下载这个</a>，安装，然后在手机上默认浏览器中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。</p>
 									</div>
 									
 								</div>
@@ -165,9 +76,13 @@
 									
 								</div>
 							</div>
-							
-							
 						
+							
+							
+							
+						</div>
+						
+						<div class="col-lg-6 col-md-6">
 							
 						
 						
@@ -202,6 +117,7 @@
 													type: "doughnut",
 													showInLegend: true,
 													dataPoints: [
+														{if $user->transfer_enable != 0}
 														{
 															y: {$user->last_day_t/$user->transfer_enable*100}, legendText:"已用 {number_format($user->last_day_t/$user->transfer_enable*100,2)}% {$user->LastusedTraffic()}", indexLabel: "已用 {number_format($user->last_day_t/$user->transfer_enable*100,2)}% {$user->LastusedTraffic()}"
 														},
@@ -211,6 +127,7 @@
 														{
 															y: {($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100}, legendText:"剩余 {number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}% {$user->unusedTraffic()}", indexLabel: "剩余 {number_format(($user->transfer_enable-($user->u+$user->d))/$user->transfer_enable*100,2)}% {$user->unusedTraffic()}"
 														}
+														{/if}
 													]
 												}
 												]
@@ -230,11 +147,19 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">续命获取流量</p>
+											<p>流量不会重置，可以通过续命获取流量。</p>
+
+											<p>每次续命可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
+										
 											<p>每天可以续命一次。您可以点击按钮或者摇动手机来续命。</p>
 
 											<p>上次续命时间：<code>{$user->lastCheckInTime()}</code></p>
 											
 											<p id="checkin-msg"></p>
+											
+											{if $geetest_html != null}
+												<div id="popup-captcha"></div>
+											{/if}
 									</div>
 									
 									<div class="card-action">
@@ -325,6 +250,10 @@
 {include file='user/footer.tpl'}
 
 <script src="theme/material/js/shake.js/shake.js"></script>
+
+
+
+{if $geetest_html == null}
 <script>
 window.onload = function() { 
     var myShakeEvent = new Shake({ 
@@ -382,11 +311,81 @@ window.onload = function() {
             })
         })
     })
-	$("#android_add").click(function(){
-		var links = new Array({$android_add});
-		for(var i=0; i<links.length; i++){
-			window.open (links[i]);
-		}
-	});
 	
 </script>
+{else}
+
+
+<script>
+window.onload = function() { 
+    var myShakeEvent = new Shake({ 
+        threshold: 15 
+    }); 
+ 
+    myShakeEvent.start(); 
+ 
+    window.addEventListener('shake', shakeEventDidOccur, false); 
+ 
+    function shakeEventDidOccur () { 
+		if("vibrate" in navigator){
+			navigator.vibrate(500);
+		}
+		
+        c.show();
+    } 
+}; 
+
+</script>
+
+
+
+<script>
+
+
+	var handlerPopup = function (captchaObj) {
+		c = captchaObj;
+		captchaObj.onSuccess(function () {
+			var validate = captchaObj.getValidate();
+            $.ajax({
+                url: "/user/checkin", // 进行二次验证
+                type: "post",
+                dataType: "json",
+                data: {
+                    // 二次验证所需的三个值
+                    geetest_challenge: validate.geetest_challenge,
+                    geetest_validate: validate.geetest_validate,
+                    geetest_seccode: validate.geetest_seccode
+                },
+                success: function (data) {
+                    $("#checkin-msg").html(data.msg);
+                    $("#checkin-btn").hide();
+					$("#result").modal();
+                    $("#msg").html(data.msg);
+                },
+                error: function (jqXHR) {
+					$("#result").modal();
+                    $("#msg").html("发生错误：" + jqXHR.status);
+                }
+            });
+        });
+        // 弹出式需要绑定触发验证码弹出按钮
+        captchaObj.bindOn("#checkin");
+        // 将验证码加到id为captcha的元素里
+        captchaObj.appendTo("#popup-captcha");
+        // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+    };
+
+	initGeetest({
+		gt: "{$geetest_html->gt}",
+		challenge: "{$geetest_html->challenge}",
+		product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+		offline: {if $geetest_html->success}0{else}1{/if} // 表示用户后台检测极验服务器是否宕机，与SDK配合，用户一般不需要关注
+	}, handlerPopup);
+	
+	
+</script>
+
+
+{/if}
+
+

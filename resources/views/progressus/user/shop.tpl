@@ -19,14 +19,14 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="col-lg-12 col-lg-push-0 col-sm-10 col-sm-push-1">
+			<div class="col-lg-12 col-sm-12">
 				<section class="content-inner margin-top-no">
 					
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
 								<p>系统中所有商品的列表。您购买等级类的商品时有效期会从当前时间开始计算。</p>
-								<p>当前余额：{$user->money} 元 <a class="btn btn-brand-accent" href="/user/code">充值</a></p>
+								<p>当前余额：{$user->money} 元</p>
 							</div>
 						</div>
 					</div>
@@ -217,8 +217,8 @@ $("#order_input").click(function () {
 			success: function (data) {
 				if (data.ret) {
 					$("#result").modal();
-					$("#msg").html(data.msg+"  五秒后跳转。");
-					window.setTimeout("location.href='/user/shop'", 5000);
+					$("#msg").html(data.msg);
+					window.setTimeout("location.href='/user/shop'", {$config['jump_delay']});
 				} else {
 					$("#result").modal();
 					$("#msg").html(data.msg);

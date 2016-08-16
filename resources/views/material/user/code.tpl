@@ -24,9 +24,6 @@
 		<div class="container">
 			<section class="content-inner margin-top-no">
 				<div class="row">
-<<<<<<< HEAD
-				
-=======
 				
 					{if $enable_alipay != 'false'}
 					<div class="col-lg-12 col-md-12">
@@ -50,8 +47,6 @@
 						</div>
 					</div>
 					{/if}
-				
->>>>>>> e9f6d431a8f30ebab51d0f4f8f8e78f5d14bf484
 					
 					
 					<div class="col-lg-12 col-md-12">
@@ -194,9 +189,6 @@
                 }
             })
         })
-<<<<<<< HEAD
-
-=======
 		
 		
 		{if $enable_alipay != 'false'}
@@ -214,8 +206,6 @@
 		
 		
 		{/if}
-    
->>>>>>> e9f6d431a8f30ebab51d0f4f8f8e78f5d14bf484
 	
 	timestamp = {time()}; 
 		
