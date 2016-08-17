@@ -253,7 +253,7 @@ class HomeController extends BaseController
 					$trade_status = $_POST['trade_status'];
 
 
-					if($_POST['trade_status'] == 'TRADE_FINISHED' || $_POST['trade_status'] == 'TRADE_SUCCESS') {
+					if($_POST['trade_status'] == 'TRADE_FINISHED') {
 						//判断该笔订单是否在商户网站中已经做过处理
 							//如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序
 							//请务必判断请求时的total_fee、seller_id与通知时获取的total_fee、seller_id为一致的
@@ -288,7 +288,7 @@ class HomeController extends BaseController
 						{
 							$gift_user=User::where("id","=",$user->ref_by)->first();
 							$gift_user->money=($gift_user->money+($codeq->number*(Config::get('code_payback')/100)));
-							$gift_user->money=($gift_user->treansfer_enable+$codeq->number*(Config::get('code_payback')/100)*1024*1024*1024);
+							$gift_user->treansfer_enable=($gift_user->treansfer_enable+$codeq->number*(Config::get('code_payback')/100)*1024*1024*1024);
 							$gift_user->save();
 							
 							$Payback=new Payback();
@@ -302,6 +302,52 @@ class HomeController extends BaseController
 						}
 						
 						
+						
+					}
+					else if ($_POST['trade_status'] == 'TRADE_SUCCESS') {
+						//判断该笔订单是否在商户网站中已经做过处理
+							//如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序
+							//请务必判断请求时的total_fee、seller_id与通知时获取的total_fee、seller_id为一致的
+							//如果有做过处理，不执行商户的业务程序
+								
+						//注意：
+						//付款完成后，支付宝系统发送该交易状态通知
+
+						//调试用，写文本函数记录程序运行情况是否正常
+						//logResult("这里写入想要调试的代码变量值，或其他运行的结果记录");
+						
+						$user=User::find($trade->userid);
+						$user->money=$user->money+$_POST['total_fee'];
+						$user->treansfer_enable=$user->treansfer_enable+$_POST['total_fee']*1024*1024*1024;
+						$user->save();
+						
+						$codeq=new Code();
+						$codeq->code="订单号:&nbsp;".$out_trade_no."-".$trade_no;
+						$codeq->isused=1;
+						$codeq->type=10001;
+						$codeq->number=$_POST['total_fee'];
+						$codeq->usedatetime=date("Y-m-d H:i:s");
+						$codeq->userid=$user->id;
+						$codeq->save();
+					  
+					  
+						
+						
+						if($user->ref_by!=""&&$user->ref_by!=0&&$user->ref_by!=NULL)
+						{
+							$gift_user=User::where("id","=",$user->ref_by)->first();
+							$gift_user->treansfer_enable=($gift_user->treansfer_enable+($codeq->number*(Config::get('code_payback')/100)*1024*1024*1024));
+							$gift_user->save();
+							
+							$Payback=new Payback();
+							$Payback->total=$_POST['total_fee'];
+							$Payback->userid=$user->id;
+							$Payback->ref_by=$user->ref_by;
+							$Payback->ref_get=$codeq->number*(Config::get('code_payback')/100);
+							$Payback->datetime=time();
+							$Payback->save();
+							
+						}
 						
 					}
 
