@@ -16,22 +16,20 @@
                   <!--price start-->
                   <div class="text-center feature-head">
                       <h1>想获得更高速便捷的上网体验？</h1>
-                      <p>账户余额: {$user->money}元 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/user/code">立即充值</a></p>
+                      <span>账户余额: {$user->unusedTraffic()}&nbsp;&nbsp;&nbsp;&nbsp;<a class="label label-warning" href="/user/code">立即充值</a></span>
                   </div>
                   <div class="col-lg-3 col-sm-3">
                       <div class="pricing-table">
                           <div class="pricing-head">
-                              <h1> 打酱油 </h1>
+                              <h1> 临时卡 </h1>
                               <h2>
-                                  <span class="note">￥</span>1</h2>
+                                  <span class="note">￥</span>1<sup>*</sup></h2>
                           </div>
                           <ul class="list-unstyled">
-                              <li>流量: <strong>300 </strong>MB</li>
                               <li>有效期: <strong>1 </strong>天</li>
-                              <li>普通节点: <i class="fa fa-check"></i></li>
-                              <li>高速节点: <i class="fa fa-times"></i></li>
+                              <li>高速节点: <i class="fa fa-check"></i></li>
                               <li>国内中转: <i class="fa fa-times"></i></li>
-                              <li>24小时客服: <i class="fa fa-times"></i></li>
+                              <li>客服远程协助: <i class="fa fa-times"></i></li>
                               <li>适合测试，临时使用</li>
                           </ul>
                           <div class="price-actions">
@@ -42,63 +40,57 @@
                   <div class="col-lg-3 col-sm-3">
                       <div class="pricing-table">
                           <div class="pricing-head">
-                              <h1> 加油卡 </h1>
+                              <h1> 月卡 </h1>
                               <h2>
-                                  <span class="note">￥</span>20 </h2>
+                              <span class="note">￥</span>6<sup>*</sup></h2>
                           </div>
                           <ul class="list-unstyled">
-                              <li>流量: <strong>10 </strong>GB</li>
-                              <li>有效期: <strong>365</strong> 天</li>
-                              <li>普通节点: <i class="fa fa-check"></i></li>
+                              <li>有效期: <strong>31</strong> 天</li>
                               <li>高速节点: <i class="fa fa-check"></i></li>
                               <li>国内中转: <i class="fa fa-times"></i></li>
-                              <li>24小时客服: <i class="fa fa-times"></i></li>
-                              <li>流量不过期，想用就用</li>
+                              <li>24小时客服: <i class="fa fa-check"></i></li>
+                              <li>享受更快体验</li>
                           </ul>
                           <div class="price-actions">
-                              <a class="btn" href="javascript:;" onclick="buy('1',0,0)">马上出发</a>
+                              <a class="btn" href="javascript:;" onclick="buy('2',1,0)">马上出发</a>
                           </div>
                       </div>
                   </div>
                   <div class="col-lg-3 col-sm-3">
                       <div class="pricing-table most-popular">
                           <div class="pricing-head">
-                              <h1> 年票 </h1>
+                              <h1> 年卡 </h1>
                               <h2>
-                                  <span class="note">￥</span>150</h2>
+                                  <span class="note">￥</span>60<sup>*</sup></h2>
                           </div>
                           <ul class="list-unstyled">
-                              <li>流量: <strong>500 </strong>GB/月</li>
                               <li>有效期: <strong>365</strong>天</li>
-                              <li>普通节点: <i class="fa fa-check"></i></li>
                               <li>高速节点: <i class="fa fa-check"></i></li>
                               <li>国内中转: <i class="fa fa-times"></i></li>
                               <li>24小时客服: <i class="fa fa-check"></i></li>
                               <li>买10月送2月</li>
                           </ul>
                           <div class="price-actions">
-                              <a class="btn" href="javascript:;" onclick="buy('1',0,0)">马上出发</a>
+                              <a class="btn" href="javascript:;" onclick="buy('3',1,0)">马上出发</a>
                           </div>
                       </div>
                   </div>
                   <div class="col-lg-3 col-sm-3">
                       <div class="pricing-table">
                           <div class="pricing-head">
-                              <h1> 月票 </h1>
+                              <h1> 尊享卡 </h1>
                               <h2>
-                                  <span class="note">￥</span>15 </h2>
+                                 <span class="note">￥</span>15<sup>*</sup></h2>
                           </div>
                           <ul class="list-unstyled">
-                              <li>流量: <strong>500 </strong>GB/月</li>
                               <li>有效期: <strong>31</strong>天</li>
-                              <li>普通节点: <i class="fa fa-check"></i></li>
                               <li>高速节点: <i class="fa fa-check"></i></li>
-                              <li>国内中转: <i class="fa fa-times"></i></li>
+                              <li>国内中转: <i class="fa fa-check"></i></li>
                               <li>24小时客服: <i class="fa fa-check"></i></li>
-                              <li>500G包月随便用</li>
+                              <li><strong>*国内中转线路流量比例为1.5倍</strong></li>
                           </ul>
                           <div class="price-actions">
-                              <a class="btn" href="javascript:;" onclick="buy('1',0,0)">马上出发</a>
+                              <a class="btn" href="javascript:;" onclick="buy('4',1,0)">马上出发</a>
                           </div>
                       </div>
                   </div>
@@ -109,7 +101,10 @@
                                   <button data-dismiss="alert" class="close close-sm" type="button">
                                       <i class="fa fa-times"></i>
                                   </button>
-                                  国内中转服务以及中小企业独立节点等定制服务欢迎<a href="mailto:admin@gosiyi.com">来函垂询</a>。
+                <p>购买服务即代表同意我们的<a href="/tos" target="_blank">用户协议</a>。</p>
+                <p>实际消耗流量以服务器记录为准。</p>
+                <p>*开通费为一次性收费。实际消耗流量仍需另行付费。1GB≈1元**。</p>
+                <p>**中转加速为精品线路，流量比例为1.5倍。1GB≈1.5元。</p>
                               </div>
               <!-- coupon dialog -->
 					<div class="modal fade modal-dialog-center " id="coupon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -215,8 +210,8 @@ $("#coupon_input").click(function () {
 			},
 			success: function (data) {
 				if (data.ret) {
-					$("#name").html("商品名称："+data.name);
-					$("#credit").html("优惠额度："+data.credit);
+					$("#name").html("名称："+data.name);
+					$("#credit").html("折扣："+data.credit);
 					$("#total").html("总金额："+data.total);
 					$("#order_modal").modal();
 				} else {

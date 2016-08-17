@@ -1090,14 +1090,15 @@ class UserController extends BaseController
 		
 		$price=$shop->price*((100-$credit)/100);
 		$user=$this->user;
-		if($user->money<$price)
+		$rest=$user->transfer_enable-$user->u-$user->d;
+		if($rest<$price*1024*1024*1024)
 		{
 			$res['ret'] = 0;
 			$res['msg'] = "余额不足";
 			return $response->getBody()->write(json_encode($res));
 		}
 		
-		$user->money=$user->money-$price;
+		$user->transfer_enable=$user->transfer_enable-$price*1024*1024*1024;
 		$user->save();
 		
 		$bought=new Bought();

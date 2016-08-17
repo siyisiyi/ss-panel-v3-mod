@@ -99,7 +99,7 @@
 													<tr>
 														<th>###</th>
 														<th>返利用户</th>
-														<th>返利金额</th>
+														<th>返利流量</th>
 													</tr>
 													</thead>
 													<tbody>
@@ -108,7 +108,7 @@
 															<td><b>{$payback->id}</b></td>
 															<td>{if $payback->user()==null}已注销{else}{$payback->user()->user_name}{/if}
 															</td>
-															<td>{$payback->ref_get} 元</td>
+															<td>{$payback->ref_get} GB</td>
 														</tr>
 													{/foreach}
 													</tbody>

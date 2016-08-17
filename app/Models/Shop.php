@@ -19,8 +19,8 @@ class Shop extends Model
 			switch ($key)
 			{
 				case "bandwidth":
-					$content_text .= "添加流量 ".$value." G ";
-					break;
+					// $content_text .= "添加流量 ".$value." G ";
+					// break;
 				case "expire":
 					$content_text .= "为账号的有效期添加 ".$value." 天 ";
 					break;
@@ -120,7 +120,7 @@ class Shop extends Model
 						}
 						else
 						{
-							$user->transfer_enable=$user->transfer_enable+$value*1024*1024*1024;
+							//$user->transfer_enable=$user->transfer_enable+$value*1024*1024*1024;
 						}
 					}
 					else
@@ -134,7 +134,7 @@ class Shop extends Model
 						}
 						else
 						{
-							$user->transfer_enable=$user->transfer_enable+$value*1024*1024*1024;
+							//$user->transfer_enable=$user->transfer_enable+$value*1024*1024*1024;
 						}
 					}
 					break;

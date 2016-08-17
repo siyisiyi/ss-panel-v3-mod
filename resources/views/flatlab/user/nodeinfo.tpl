@@ -41,10 +41,10 @@
 						<h5>配置地址</h5>
 						<input id="ss-qr-text" class="form-control" value="{$ssqr_s}">
 						{if $config['enable_rss']=='true'&&$node->custom_rss==1&&!($user->obfs=='plain'&&$user->protocol=='origin')}
-						<h5>新版二维码</h5>
+						<h5>SSR二维码</h5>
 						<div id="ss-qr-n"></div>
 						{/if}
-						<h5>旧版二维码</h5>
+						<h5>SS二维码</h5>
 						<div id="ss-qr"></div>
 						<h5>配置Json</h5>
 						<textarea class="form-control" rows="6">{$json_show}</textarea>

@@ -48,7 +48,7 @@
                   <li class="dropdown">
                       <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                           <img alt="" src="{$user->gravatar}}" width="29px">
-                          <span class="username">余额: <strong>{$user->money}</strong> 元</span>
+                          <span class="username">余额: <strong>{$user->unusedTraffic()}</strong> </span>
                           <b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu extended logout">

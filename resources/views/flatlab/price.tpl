@@ -28,15 +28,24 @@
                     <h3 id="page-head">购买与续费</h3>
                 </div>
                 <hr>
+                <div class="">
+                    <div class="text-center">
+                        <p>
+                            默认按需付费，1G≈￥1，需要多少流量充多少。<br/>不必担心服务不稳定，更不必担心供应商跑路。<br/>
+                            如果需要体验更高速的优质服务，可以考虑以下精品路线：
+                        </p>
+                    </div>
+
+                </div>
+                <hr>
                 <div class="row">
                     <div class="col-md-3">
                         <div class="tile">
-                            <img src="theme/flatui/images/icons/svg/ribbon.svg" alt="ribbon" class="tile-hot-ribbon">
                             <img src="theme/flatui/images/icons/svg/loop.svg" alt="Infinity-Loop" class="tile-image">
-                            <h3 class="tile-title">年票</h3>
-                            <div class="text-success" >￥12.5 每月</div>
-                            <div class="text-success" >200G/月</div>
-                            <p class="text-success"><strong>免费2月！</strong></p>
+                            <h3 class="tile-title">临时卡</h3>
+                            <div class="" >开通费: ￥1<sup>*</sup></div>
+                            <div class="" >有效期1天</div>
+                            <p class=""><strong>适合测试，临时使用</strong></p>
                             <button class="btn btn-primary btn-large btn-block purchase" id="annual">
                                 购买&amp;续费
                             </button>
@@ -46,10 +55,10 @@
                     <div class="col-md-3">
                         <div class="tile">
                             <img src="theme/flatui/images/icons/png/Spaceship@2x.png" alt="Pensils" class="tile-image">
-                            <h3 class="tile-title">月票</h3>
-                            <div class="text-success" >￥15 每月</div>
-                            <div class="text-success" >200G/月</div>
-                            <p class="text-success"><strong>畅行无阻！</strong></p>
+                            <h3 class="tile-title">月卡</h3>
+                            <div class="" >开通费: ￥6<sup>*</sup></div>
+                            <div class="" >有效期31天</div>
+                            <p class=""><strong>享受高速体验</strong></p>
                             <button class="btn btn-primary btn-large btn-block purchase" id="monthly">
                                 购买&amp;续费
                             </button>
@@ -58,11 +67,12 @@
 
                     <div class="col-md-3">
                         <div class="tile">
+                            <img src="theme/flatui/images/icons/svg/ribbon.svg" alt="ribbon" class="tile-hot-ribbon">
                             <img src="theme/flatui/images/icons/svg/bulb.svg" alt="Chat" class="tile-image">
-                            <h3 class="tile-title">油票</h3>
-                            <div class="text-success" >￥20</div>
-                            <div class="text-success" >10GB/张</div>
-                            <p class="text-success"><strong>永久流量</strong></p>
+                            <h3 class="tile-title">年卡</h3>
+                            <div class="" >开通费: ￥60<sup>*</sup></div>
+                            <div class="" >有效期365天</div>
+                            <p class=""><strong>买10月送2月</strong></p>
                             <button class="btn btn-primary btn-large btn-block purchase" id="demand">
                                 购买&amp;续费
                             </button>
@@ -72,55 +82,25 @@
                         <div class="col-md-3">
                             <div class="tile">
                                 <img src="theme/flatui/images/icons/svg/retina.svg" alt="Chat" class="tile-image">
-                                <h3 class="tile-title">打酱油</h3>
-                                <div class="text-success" >仅需 ￥1 </div>
-                                <div class="text-success" >300MB</div>
-                                <p class="text-success"><strong>测试&amp;一天有效</strong></p>
+                                <h3 class="tile-title">尊享卡</h3>
+                                <div class="" >开通费: ￥15<sup>*</sup></div>
+                                <div class="" >有效期31天</div>
+                                <p class=""><strong>国内节点中转加速</strong><sup>**</sup></p>
                                 <button class="btn btn-primary btn-large btn-block purchase" id="test">
                                 购买&amp;续费
                             </button>
                             </div>
                         </div>
                 </div> <!-- end of row -->
+                <div>
+                    <hr>
+                    <small class="">
+                        *开通费为一次性收费。实际消耗流量仍需另行付费。1GB≈1元<sup>**</sup>。<br/>
+                        **中转加速为精品线路，流量比例为1.5倍。1GB≈1.5元。
+                    </small>
+                </div>
             </div> <!-- end of main -->
         </div> <!-- end of row -->
-
-        <div class="row">
-            <div class="text-center">
-                <h4>更多精品线路:</h4>
-            </div>
-
-            <div class="col-md-8 col-md-offset-2" style="margin-top: 20px">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                            <th>需求</th>
-                            <th>节点</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>国内中转服务器加速，访问速度有效提高30%~100%</td>
-                            <td><div class="text-center">中转加速节点&nbsp;<span class="glyphicon glyphicon-ok"></span></div></td>
-                        </tr>
-                        <tr>
-                            <td>Ping太高？补兵不顺，人物飘移？针对海外游戏进行UDP加速</td>
-                            <td><div class="text-center">游戏加速节点&nbsp;<span class="glyphicon glyphicon-ok"></span></div></td>
-                        </tr>
-                        <tr>
-                            <td>共享带宽不够，不想和一群人一起挤一台服务器？</td>
-                            <td><div class="text-center">海外精英节点&nbsp;<span class="glyphicon glyphicon-ok"></span></div></td>
-                        </tr>
-                        <tr>
-                            <td>商务需求，为中小型企业扩宽海外市场</td>
-                            <td><div class="text-center">定制独享节点<span class="glyphicon glyphicon-ok"></span></div></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
     </div> <!-- end of container -->
 
 {include file='footer_new.tpl'}

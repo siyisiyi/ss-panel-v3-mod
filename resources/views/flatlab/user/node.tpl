@@ -15,14 +15,23 @@
             <h2 class="page-title"><i class="icon-equalizer"></i>&nbsp;节点列表 | <small>Node List</small></h2>
 
             <div class="col-md-12">
+              <div class="alert alert-danger fade in">
+                    <button data-dismiss="alert" class="close close-sm" type="button">
+                        <i class="fa fa-times"></i>
+                    </button>
+                    <p><strong><i class="fa fa-warning"></i>警告: {$config["appName"]}不是法外之地！</strong></p>
+                    <p>严禁进行：下载BT、盗版、群发垃圾邮件、扫描、政治行为。发现一律删号且不退款。</p>
+                    <p>本站不提供匿名服务。服务器会自动记录客户端连接的时间、IP和访问站点的IP，但<strong>无法监视和记录访问的内容</strong>。</p>
+              </div>
               <div class="alert alert-warning fade in">
                     <button data-dismiss="alert" class="close close-sm" type="button">
                         <i class="fa fa-times"></i>
                     </button>
                     <p><strong><i class="fa fa-warning"></i>注意: </strong>请勿在任何地方公开节点地址！</p>
                     <p>流量比例为0.5即使用1000MB按照500MB流量记录记录结算。</p>
-                    <p>点击下方按钮可查看详细连接配置</p>
-                </div>
+                    <p>点击下方按钮可查看详细连接配置。</p>
+              </div>
+            </div>
             </div>
             {$id=0}
             {foreach $node_prefix as $prefix => $nodes}
@@ -44,13 +53,12 @@
                         <h4>
                         <span class="badge bg-success">{$node->status}</span> {$node->name}</h4>
                       <p>
-                      </p>
                                       
                                       {if $node->sort == 0||$node->sort==7||$node->sort==8}
                                                                               
-                                        <span>流量比例：<span class="badge bg-warning"> 
+                                        <span>流量比例:<span class="badge bg-warning"> 
                                           {$node->traffic_rate}
-                                        </span></span>
+                                        </span> 元/GB</span>
                                       {/if}
 
                                        {$node->info}
@@ -59,12 +67,10 @@
 
                         {if $node->sort > 2 && $node->sort != 5}
                                         <span class="btn btn-danger" > 
-                                        <a href="">地址：请点这里进入查看详细信息</a>
-                                      {else}<span class="btn btn-danger"> 
-                                        地址：{$node->server}
+                                        <a href="./node/{$node->id}" data-toggle="ajaxModal">地址：请点这里进入查看详细信息</a>
+                                      {else}
+                                      <a href="./node/{$node->id}" data-toggle="ajaxModal"><span class="btn btn-danger"> 地址：{$node->server}</span></a>
                                       {/if}
-                                        
-                                        </span>
 
                       </p>
                       {/foreach}

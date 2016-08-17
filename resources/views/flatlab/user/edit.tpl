@@ -94,7 +94,7 @@
                                                             <div class="form-group">
                                                                 <h3>联系方式</h3>
                                                                 <p>当前联络方式：
-                                                                <label class="label label-primary"> 
+                                                                <label class="label label-inverse"> 
                                                                 {if $user->im_type==1}
                                                                 微信
                                                                 {/if}
@@ -137,7 +137,7 @@
                                                             <span><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"><i class="fa fa-android"></i>&nbsp;Android</a></span>
                                                             <span><a href="https://itunes.apple.com/cn/app/google-authenticator/id388497605?mt=8"><i class="fa fa-apple"></i>&nbsp;iOS</a></span>
                                                             <p>在没有测试完成绑定成功之前请不要启用。</p>
-                                                            <p>当前设置：<label class="label label-primary"> {if $user->ga_enable==1} 登录时要求验证 {else} 不要求 {/if}</label></p>
+                                                            <p>当前设置：<label class="label label-inverse"> {if $user->ga_enable==1} 登录时要求验证 {else} 不要求 {/if}</label></p>
                                                             <p>当前服务器时间：<span class="font-red">{date("Y-m-d H:i:s")}</span></p>
                                                             <div class="form-group form-group-label">
                                                                 <label class="floating-label" for="ga-enable">验证设置</label>
@@ -169,7 +169,7 @@
                                     <div id="about-2" class="tab-pane">
                                         <!-- CONNECTION PASSWORD -->
                                                             <h3>连接密码修改</h3>
-                                                            <p>当前连接密码：<label class="label label-primary"> {$user->passwd}</label></p>
+                                                            <p>当前连接密码：<label class="label label-inverse"> {$user->passwd}</label></p>
                                                             <div class="form-group">
                                                                 <div class="iconic-input">
                                                                 <i class="fa fa-wifi"></i>
@@ -182,18 +182,9 @@
                                                                 &nbsp;修改</button>
                                                             </div>
                                                             <!-- END CONNECTION PASSWORD -->
-                                                            <!-- CHANGE PORT -->
-                                                            <h3>重置端口</h3>
-                                                            <p>当前端口：<label class="label label-primary"> {$user->port}</label></p>
-                                                            <div class="form-group">
-                                                                <button class="btn btn-info" id="portreset">
-                                                                    <i class="fa fa-check-square-o"></i>&nbsp;重置端口
-                                                                </button>
-                                                            </div>
-                                                            <!-- END CHANGE PORT -->
                                                             <!-- ENCRYPTION METHOD -->
                                                             <h3>加密方式修改</h3>
-                                                            <p>当前加密方式：<label class="label label-primary"> {$user->method}</label></p>
+                                                            <p>当前加密方式：<label class="label label-inverse"> {$user->method}</label></p>
                                                             <div class="form-group form-group-label">
                                                                 <label class="floating-label" for="method">加密方式</label>
                                                                 <select id="method" class="form-control">
@@ -226,7 +217,7 @@
                                                             <!-- END ENCRYPTION METHOD -->
                                                             <!-- PROTOCOL -->
                                                             <h3>RSS 协议&混淆设置</h3>
-                                                            <p>当前协议：<label class="label label-primary"> {$user->protocol}</label></p>
+                                                            <p>当前协议：<label class="label label-inverse"> {$user->protocol}</label></p>
                                                             <div class="alert alert-block alert-warning fade in">
                                                                 <button type="button" class="close" data-dismiss="alert"></button>
                                                                 <p><i class="fa fa-warning"></i>&nbsp;注意：如果需要兼容原版SS请选择带_compatible的兼容选项！</p>
@@ -247,7 +238,7 @@
                                                                 </select>
                                                             </div>
                                                             
-                                                            <p>当前混淆方式：<label class="label label-primary"> {$user->obfs}</label></p>
+                                                            <p>当前混淆方式：<label class="label label-inverse"> {$user->obfs}</label></p>
                                                             <div class="form-group form-group-label">
                                                                 <label class="floating-label" for="obfs">混淆方式</label>
                                                                 <select id="obfs" class="form-control">
@@ -266,7 +257,7 @@
                                                             </div>
                                                             
                                                             <div class="form-group">
-                                                                <button class="btn btn-info" id="rss-update" ><i class="fa fa-check-square-o">check</i>&nbsp;修改</button>
+                                                                <button class="btn btn-info" id="rss-update" ><i class="fa fa-check-square-o"></i>&nbsp;修改</button>
                                                             </div>
                                                             <!-- END PROTOCOL -->
                                                             <!-- CUSTOM PAC -->
@@ -276,7 +267,7 @@
                                                                 <textarea class="form-control" id="pac" rows="8" placeholder="自定义PAC/Surge">{$user->pac}</textarea>
                                                             </div>
                                                             <div class="form-group">
-                                                            <button class="btn btn-info" id="rss-update" ><i class="fa fa-check-square-o">check</i>&nbsp;设置</button>
+                                                            <button class="btn btn-info" id="rss-update" ><i class="fa fa-check-square-o"></i>&nbsp;设置</button>
                                                             </div>
                                                             <!-- END CUSTOM PAC -->
                                     </div>
@@ -284,12 +275,12 @@
                                     <div id="contact-2" class="tab-pane ">
 
                                     <h3>IP解封</h3>
-                                                            <p>当前状态：<label class="label label-primary"> {$Block}</label></p>
+                                                            <p>当前状态：<label class="label label-inverse"> {$Block}</label></p>
                                                             <div class="form-group">
                                                                 <button class="btn btn-info" id="unblock" ><i class="fa fa-flash"></i>&nbsp;解封</button>
                                                             </div>
                                                             <h3>每日邮件设置</h3>
-                                                            <p>当前设置：<label class="label label-primary"> {if $user->sendDailyMail==1} 发送 {else} 不发送 {/if}</label></p>
+                                                            <p>当前设置：<label class="label label-inverse"> {if $user->sendDailyMail==1} 发送 {else} 不发送 {/if}</label></p>
                                                             <div class="form-group">
                                                                 <select id="mail" class="form-control">
                                                                     <option>发送设置</option>

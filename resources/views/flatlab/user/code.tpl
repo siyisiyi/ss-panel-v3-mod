@@ -22,7 +22,8 @@
                                       <i class="fa fa-times"></i>
                                   </button>
 	                                    <p><i class="fa fa-money"></i>
-	                                    &nbsp;账户余额: <strong>{$user->money}</strong> 元
+	                                    &nbsp;账户余额: <strong>{$user->unusedTraffic()}</strong>
+	                                    <span style="float:right;">1GB ≈ 1 元</span>
 	                                    </p>
 	                            </div>
 	                        </div>
@@ -34,7 +35,7 @@
 					<section class="panel">
 	                                  <div class="twt-feed blue-bg">
 	                                      <h1>支付宝充值</h1>
-	                                      <p>在线充值，最低1元</p>
+	                                      <p>在线充值，最低10GB</p>
 	                                      <a href="#">
 	                                          <img src="/theme/flatlab/images/alipay-logo.png" alt="Alipay Logo" width="120px" />
 	                                      </a>
@@ -42,7 +43,7 @@
 	                                  <div class="twt-write col-sm-12" style="margin-top:55px;">
 	                                  	<div class="iconic-input">
 											<i class="fa fa-rmb"></i>
-		                                    <input class="form-control" type="text" placeholder="充值金额" id="amount">
+		                                    <input class="form-control" type="text" placeholder="充值流量" id="amount">
 		                                </div>
 	                                  </div>
 	                                  <footer class="twt-footer">
@@ -105,7 +106,7 @@
 												<table class="table table-hover">
 													<tr>
 														<th style="border:0;">代码</th>
-														<th style="border:0;">类型</th>
+														<th style="border:0;">支付</th>
 														<th style="border:0;">操作</th>
 														<th style="border:0;">使用时间</th>
 														
@@ -114,10 +115,10 @@
 														<tr>
 															<td>{$code->code}</td>
 															{if $code->type==-1}
-															<td>金额充值</td>
+															<td>充值码</td>
 															{/if}
 															{if $code->type==10001}
-															<td>流量充值</td>
+															<td>支付宝</td>
 															{/if}
 															{if $code->type==10002}
 															<td>用户续期</td>
@@ -126,7 +127,7 @@
 															<td>等级续期 - 等级{$code->type}</td>
 															{/if}
 															{if $code->type==-1}
-															<td>充值 {$code->number} 元</td>
+															<td>充值 {$code->number} GB 流量</td>
 															{/if}
 															{if $code->type==10001}
 															<td>充值 {$code->number} GB 流量</td>
