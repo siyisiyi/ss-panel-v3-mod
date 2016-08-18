@@ -60,10 +60,9 @@
                 </div>
               </div>
 
-
-<script src="/assets/public/js/jquery.min.js"></script>
-<script src="/assets/public/js/jquery.qrcode.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 <script>
+(function($) { 
 	var text_qrcode = '{$ssqr_s}';
 	jQuery('#ss-qr').qrcode({
 		"text": text_qrcode
@@ -75,6 +74,6 @@
 	jQuery('#ss-qr-n').qrcode({
 		"text": text_qrcode2
 	});
-	{/if}
-
+	{/if}  
+})(jQuery);
 </script>

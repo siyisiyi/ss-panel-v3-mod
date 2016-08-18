@@ -268,8 +268,8 @@ class HomeController extends BaseController
 						
 						
 						$user=User::find($trade->userid);
-						$user->money=$user->money+$_POST['total_fee'];
-						$user->treansfer_enable=$user->treansfer_enable+$_POST['total_fee']*1024*1024*1024;
+						//$user->money=$user->money+$_POST['total_fee'];
+						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024);
 						$user->save();
 						
 						$codeq=new Code();
@@ -288,7 +288,7 @@ class HomeController extends BaseController
 						{
 							$gift_user=User::where("id","=",$user->ref_by)->first();
 							$gift_user->money=($gift_user->money+($codeq->number*(Config::get('code_payback')/100)));
-							$gift_user->treansfer_enable=($gift_user->treansfer_enable+$codeq->number*(Config::get('code_payback')/100)*1024*1024*1024);
+							$gift_user->transfer_enable=($gift_user->transfer_enable+ceil($codeq->number*(Config::get('code_payback')/100)*1024*1024*1024));
 							$gift_user->save();
 							
 							$Payback=new Payback();
@@ -317,8 +317,8 @@ class HomeController extends BaseController
 						//logResult("这里写入想要调试的代码变量值，或其他运行的结果记录");
 						
 						$user=User::find($trade->userid);
-						$user->money=$user->money+$_POST['total_fee'];
-						$user->treansfer_enable=$user->treansfer_enable+$_POST['total_fee']*1024*1024*1024;
+						//$user->money=$user->money+$_POST['total_fee'];
+						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024);
 						$user->save();
 						
 						$codeq=new Code();
@@ -336,7 +336,7 @@ class HomeController extends BaseController
 						if($user->ref_by!=""&&$user->ref_by!=0&&$user->ref_by!=NULL)
 						{
 							$gift_user=User::where("id","=",$user->ref_by)->first();
-							$gift_user->treansfer_enable=($gift_user->treansfer_enable+($codeq->number*(Config::get('code_payback')/100)*1024*1024*1024));
+							$gift_user->transfer_enable=($gift_user->transfer_enable+ceil($codeq->number*(Config::get('code_payback')/100)*1024*1024*1024));
 							$gift_user->save();
 							
 							$Payback=new Payback();

@@ -58,7 +58,7 @@
                                                                               
                                         <span>流量比例:<span class="badge bg-warning"> 
                                           {$node->traffic_rate}
-                                        </span> 元/GB</span>
+                                        </span> </span>
                                       {/if}
 
                                        {$node->info}
@@ -90,7 +90,7 @@
 
 
 {include file='user/footer.tpl'}
-
+<script src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 <script>
 jQuery(function($){
   $(document).on('click', '[data-toggle="ajaxModal"]', function(e) {
