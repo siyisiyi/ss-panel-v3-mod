@@ -20,7 +20,7 @@
                                     <span class="form-control-feedback fui-user"></span>
                                 </div>
                                 <div class="form-group has-feedback">
-                                    <input class="form-control" id="email" placeholder="Email" type="email" required="required">
+                                    <input class="form-control" id="email" placeholder="Email 请勿使用QQ邮箱" type="email" required="required">
                                     <span class="form-control-feedback fui-mail"></span>
                                 </div>
                                 {if $enable_email_verify == 'true'}
@@ -66,8 +66,8 @@
                                 </button>
                                 <p class="help-block pull-left">注册即代表同意<a href="/tos">服务条款</a></p>
                                 <p class="help-block pull-right"><a href="/auth/login">已有账户?</a></p>
-                                {include file='dialog.tpl'}
-                            </fieldset>
+                                
+                            </fieldset>{include file='dialog.tpl'}
                         </form>
                     </div>
                 </div>
@@ -163,6 +163,15 @@
 			}
 			
 			{/if}
+
+            var emailAdd = $("#email").val();
+            if (emailAdd.indexOf('qq.com') >= 0)
+            {
+                $("#result").modal();
+                $("#msg").html("请勿使用QQ邮箱。");
+                return;
+            }
+
             register();
         });
     })
@@ -172,8 +181,8 @@
 {if $enable_email_verify == 'true'}
 <script>
     $(document).ready(function () {
-        $("#email_verify").click(function () {
-			document.getElementById("email_verify").disabled = true; 
+        function verify () {
+            document.getElementById("email_verify").disabled = true; 
             $.ajax({
                 type: "POST",
                 url: "send",
@@ -183,22 +192,34 @@
                 },
                 success: function (data) {
                     if (data.ret) {
-						document.getElementById("email_verify").disabled = true; 
+                        document.getElementById("email_verify").disabled = true; 
                         $("#result").modal();
-						$("#msg").html(data.msg);
+                        $("#msg").html(data.msg);
                     } else {
-						document.getElementById("email_verify").disabled = false; 
+                        document.getElementById("email_verify").disabled = false; 
                         $("#result").modal();
-						$("#msg").html(data.msg);
+                        $("#msg").html(data.msg);
                     }
                 },
                 error: function (jqXHR) {
-					document.getElementById("email_verify").disabled = false; 
+                    document.getElementById("email_verify").disabled = false; 
                     $("#result").modal();
-					$("#msg").html(data.msg+"     出现了一些错误。");
+                    $("#msg").html(data.msg+"     出现了一些错误。");
                 }
-            })
-        })
+            });
+        }
+
+        $("#email_verify").click(function(){
+            var emailAdd = $("#email").val();
+            if (emailAdd.indexOf('qq.com') >= 0)
+            {
+                $("#result").modal();
+                $("#msg").html("请勿使用QQ邮箱。");
+                return;
+            }
+
+            verify();
+        });
     })
 </script>
 {/if}
