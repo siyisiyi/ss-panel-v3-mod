@@ -6,14 +6,12 @@
 	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
 	<meta name="theme-color" content="#f44336">
 	<title>{$config["appName"]}</title>
-
-	
 	
 	<!-- css -->
 	<link href="/theme/material/css/base.min.css" rel="stylesheet">
 	<link href="/theme/material/css/project.min.css" rel="stylesheet">
 	<link href="/theme/material/css/custom.css" rel="stylesheet">
-	
+
 </head>
 <body class="page-red">
 	<header class="header header-red header-transparent header-waterfall ui-header">
@@ -85,6 +83,12 @@
 							<li><a href="/admin/user"><i class="icon icon-lg">supervisor_account</i>&nbsp;用户列表</a></li>
 							<li><a href="/admin/invite"><i class="icon icon-lg">loyalty</i>&nbsp;邀请与返利</a></li>
 							<li><a href="/admin/login"><i class="icon icon-lg">text_fields</i>&nbsp;登录记录</a></li>
+						</ul>
+
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_detect">
+							<li><a href="/admin/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
+							<li><a href="/admin/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
 						</ul>
 						
 						

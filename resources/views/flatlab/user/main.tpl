@@ -7,19 +7,23 @@
     <title>{$config["appName"]}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/theme/flatlab/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="/theme/flatlab/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="/theme/flatlab/css/bootstrap-reset.css" rel="stylesheet">
     <!--external css-->
-    <link href="/theme/flatlab/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- <link href="/theme/flatlab/assets/font-awesome/css/font-awesome.css" rel="stylesheet" /> -->
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
     <!--right slidebar-->
-    <link href="/theme/flatlab/css/slidebars.css" rel="stylesheet">
+    <!-- <link href="/theme/flatlab/css/slidebars.css" rel="stylesheet"> -->
+    <link href="//cdn.bootcss.com/slidebars/0.10/slidebars.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/theme/flatlab/css/style.css" rel="stylesheet">
     <link href="/theme/flatlab/css/style-responsive.css" rel="stylesheet" />
     <link href="/theme/flatlab/css/custom.css" rel="stylesheet" />
-    <link href="/theme/flatlab/css/simple-line-icons.css" rel="stylesheet" />
+    <!-- <link href="/theme/flatlab/css/simple-line-icons.css" rel="stylesheet" /> -->
+    <link href="//cdn.bootcss.com/simple-line-icons/2.3.2/css/simple-line-icons.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
@@ -126,6 +130,20 @@
                     </a>
                   </li>
 
+                  <li>
+                    <a href="/user/detect" id="navDetect">
+                      <i class="icon-organization"></i>
+                      <span>屏蔽规则</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/user/detect/log" id="navDetectLog">
+                      <i class="icon-list"></i>
+                      <span>屏蔽记录</span>
+                    </a>
+                  </li>
+                  
                   {if $config['enable_donate']=='true'}
                   <li>
                     <a href="/user/donate" id="navDonate">
