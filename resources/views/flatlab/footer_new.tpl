@@ -10,16 +10,10 @@
                     <li><a href="/tutorial">教程</a></li>
                     <li><a href="/price">价格</a></li>
                     <li><a href="/code">邀请</a></li>
-                    {if $user->isLogin}
-                    <li><a href="/user">用户中心</a></li>
-                    <li><a href="/user/logout">退出</a></li>
-                    {else}
-                    <li><a href="/auth/register">注册</a></li>
-                    <li><a href="/auth/login">登录</a></li>
-                    {/if}
+                    <li><a href="/tos">协议</a></li>
                     <li><a href="http://www.miitbeian.gov.cn/" target="_blank">闽ICP备16017208号</a></li>
                 </ul>
-                <span class="pull-right" style="font-size: 14px;">&copy; 2016 <a href="/" style="font-weight: bold;">{$config["appName"]}.</a> Powered by <a href="/staff" style="font-weight: bold;">STAFF.</a></span>
+                <span class="pull-right" style="font-size: 14px;">&copy; 2016 <a href="/" style="font-weight: bold;">{$config["appName"]}</a> Powered by <a href="/staff" style="font-weight: bold;">STAFF</a>.</span>
             </div>
         </div>
     </div>

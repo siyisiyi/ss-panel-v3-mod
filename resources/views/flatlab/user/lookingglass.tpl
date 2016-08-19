@@ -25,6 +25,8 @@
 	                                    <p><i class="fa fa-warning"></i>
 	                                    &nbsp;注意：此处只展示最近{$hour}小时的记录。
 	                                    </p>
+	                                    <p>数据只供参考。由于客户端、所在地区、网络供应商的差异以及网络波动等不定因素影响，真实体验会有所不同。</p>
+	                                    <p>测速推荐在全局模式下访问<a href="https://fast.com" target="_blank">fast.com</a></p>
 	                            </div>
 	                        </div>
             	

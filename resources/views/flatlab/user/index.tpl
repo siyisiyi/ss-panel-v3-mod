@@ -462,7 +462,7 @@ window.onload = function() {
     }, int_speed);
 }
 
-countUp({$userCount});
+countUp(126);
 
 function countUp2(count)
 {

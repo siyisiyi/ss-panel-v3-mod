@@ -129,7 +129,7 @@
                       <span>观察窗</span>
                     </a>
                   </li>
-
+                  <!-- 
                   <li>
                     <a href="/user/detect" id="navDetect">
                       <i class="icon-organization"></i>
@@ -143,7 +143,7 @@
                       <span>屏蔽记录</span>
                     </a>
                   </li>
-                  
+                  -->
                   {if $config['enable_donate']=='true'}
                   <li>
                     <a href="/user/donate" id="navDonate">
