@@ -2,7 +2,7 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              &copy; {$config["appName"]} Powered by <a href="/staff">STAFF</a> {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
+              &copy; {$config["appName"]} Powered by <a href="/staff">STAFF</a>
               <a href="#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
@@ -10,7 +10,8 @@
       </footer>
       <!--footer end-->
   </section>
-  <div class="hide"><script src="https://s4.cnzz.com/z_stat.php?id=1260143745&web_id=1260143745" language="JavaScript"></script></div>
+  
+    {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
 
     <!-- js placed at the end of the document so the pages load faster -->
     <!-- <script src="/theme/flatlab/js/jquery.js"></script> -->
