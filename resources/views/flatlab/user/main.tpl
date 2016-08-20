@@ -21,7 +21,7 @@
     <!-- Custom styles for this template -->
     <link href="/theme/flatlab/css/style.css" rel="stylesheet">
     <link href="/theme/flatlab/css/style-responsive.css" rel="stylesheet" />
-    <link href="/theme/flatlab/css/custom.css" rel="stylesheet" />
+    <link href="/theme/flatlab/css/custom.min.css" rel="stylesheet" />
     <!-- <link href="/theme/flatlab/css/simple-line-icons.css" rel="stylesheet" /> -->
     <link href="//cdn.bootcss.com/simple-line-icons/2.3.2/css/simple-line-icons.min.css" rel="stylesheet">
 
@@ -33,6 +33,16 @@
   </head>
 
   <body>
+  <!-- Page Loader -->
+  <div id="loading">
+      <div id="loading-center">
+          <div id="loading-center-absolute">
+              <div class="object" id="object_one"></div>
+              <div class="object" id="object_two"></div>
+              <div class="object" id="object_three"></div>
+          </div>
+      </div>
+  </div>
 
   <section id="container" class="">
       <!--header start-->

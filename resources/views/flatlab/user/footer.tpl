@@ -32,7 +32,18 @@
     <script src="/theme/flatlab/js/common-scripts.js"></script>
     <script src="/theme/flatlab/js/addActiveClass.js"></script>
 
+    <!-- Javascript -->
+    <script type="text/javascript">
+    $(window).load(function() {
+       $("#loading").fadeOut(300);
+    }); 
 
+      try{
+        if(window.console && window.console.log)
+          console.log("偶然\n\n徐志摩\n\n我是天空里的一片云，\n偶尔投影在你的波心——\n你不必讶异，\n更无须欢喜——\n在转瞬间消灭了踪影。\n你我相逢在黑夜的海上，\n你有你的，我有我的，方向；\n你记得也好，\n最好你忘掉，\n在这交会时互放的光亮！\n");
+      }catch(e){
+      }
+    </script>
 
   </body>
 </html>

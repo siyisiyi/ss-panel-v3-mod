@@ -13,6 +13,7 @@
     <link href="/theme/flatui/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="/theme/flatui/css/flat-ui.min.css" rel="stylesheet">
+    <link href="/theme/flatui/css/loader.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -23,7 +24,19 @@
         }
     </style>
 </head>
+<!-- <body onload="$('.fakeloader').hide();"> -->
 <body>
+<!-- Page Loader -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+        </div>
+    </div>
+</div>
+<!-- Nav Bar -->
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-lg" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -59,6 +72,6 @@
 
 <!-- thumbnail -->
 <div class="hide">
-    <img src="/theme/progressus/assets/images/thumbnail.jpg" width='640px'>
+    <img src="/theme/flatlab/images/thumbnail.jpg" width='640px'>
 </div>
 <!-- /thumbnail -->

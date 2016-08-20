@@ -11,6 +11,8 @@
             vertical-align: middle;
         }
     </style>
+
+<!-- Page Contents -->
     <div class="container" style="margin-top: 160px;">
         <div class="row" style="margin-bottom: 70px;">
             <div class="col-md-12">
@@ -78,7 +80,5 @@
         </div>
         <br>
     </div>
-
-
 
 {include file='footer_new.tpl'}
