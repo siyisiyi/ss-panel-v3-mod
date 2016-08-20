@@ -72,6 +72,6 @@
 
 <!-- thumbnail -->
 <div class="hide">
-    <img src="/theme/flatlab/images/thumbnail.jpg" width='640px'>
+    <img src="/theme/flatui/images/thumbnail.jpg" width='640px'>
 </div>
 <!-- /thumbnail -->

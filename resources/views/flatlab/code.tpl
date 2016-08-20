@@ -56,7 +56,7 @@
                 </p>
                 </div>
                 <div class="col-md-4">
-				<img src="/theme/progressus/assets/images/wechat-qrcode.png" alt="C159800221" class="img-rounded pull-right" width="300" >
+				<img src="/theme/flatui/images/wechat-qrcode.png" alt="C159800221" class="img-rounded pull-right" width="300" >
 			</div>
 				</div>
             </div>
