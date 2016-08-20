@@ -144,7 +144,7 @@
 												<p id="total">总金额：</p>
 												<p id="auto_reset">在到期时自动续费</p>
 												<div class="checkboxes" id="autor">
-													<label class="label_check c_on" for="autorenew">
+													<label class="" for="autorenew">
 														<input checked id="autorenew" type="checkbox">自动续费
 													</label>
 												</div>
@@ -172,7 +172,6 @@
 
 {include file='user/footer.tpl'}
 
-<script src="/theme/flatlab/js/form-component.js"></script>
 <script>
 function buy(id,auto,auto_reset) {
 	auto_renew=auto;
