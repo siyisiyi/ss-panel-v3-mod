@@ -40,18 +40,26 @@
                   <div class="panel">
                     <div class="panel-heading">
                       {if $node_heartbeat[$prefix]=='在线'}
-                                  <span class="badge" style="background:#a9d86e;"><i class="fa fa-cloud"></i></span>
+                                  <span class="badge bg-success"><i class="fa fa-cloud"></i></span>
                                   {else}{if $node_heartbeat[$prefix]=='暂无数据'}
-                                  <span class="badge" style="background:#FCB322;"><i class="fa fa-flash"></i></span>
+                                  <span class="badge bg-warning"><i class="fa fa-flash"></i></span>
                                   {else}
-                                  <span class="badge" style="background:#ff6c60;"><i class="fa fa-exclamation-triangle"></i></span>
+                                  <span class="badge bg-danger"><i class="fa fa-exclamation-triangle"></i></span>
                                   {/if}{/if}
                                   <span>{$prefix} | <i class="fa fa-user"></i> {$node_alive[$prefix]} | <i class="fa fa-wrench"></i> {$node_method[$prefix]} | <i class="fa fa-download"></i> {if isset($node_bandwidth[$prefix])==true}{$node_bandwidth[$prefix]}{else}N/A{/if}</span>
                     </div>
                     <div class="panel-body">
                       {foreach $nodes as $node}
                         <h4>
-                        <span class="badge bg-success">{$node->status}</span> {$node->name}</h4>
+                        <span class="badge 
+                        {if $node->status=='维护'}
+                        bg-important
+                        {elseif $node->status=='异常'}
+                        bg-warning
+                        {else}
+                        bg-success
+                        {/if}
+                        ">{$node->status}</span> {$node->name}</h4>
                       <p>
                                       
                                       {if $node->sort == 0||$node->sort==7||$node->sort==8}

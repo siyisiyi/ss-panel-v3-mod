@@ -1,3 +1,9 @@
+<!--
+    Flat Panel
+    Author: siyi41 https://telegram.me/siyi41
+    forked from glzjin https://github.com/glzjin/ss-panel-v3-mod 
+ -->
+ 
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -26,16 +32,7 @@
 </head>
 <!-- <body onload="$('.fakeloader').hide();"> -->
 <body>
-<!-- Page Loader -->
-<div id="loading">
-    <div id="loading-center">
-        <div id="loading-center-absolute">
-            <div class="object" id="object_one"></div>
-            <div class="object" id="object_two"></div>
-            <div class="object" id="object_three"></div>
-        </div>
-    </div>
-</div>
+
 <!-- Nav Bar -->
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-lg" role="navigation">
     <div class="container-fluid">
@@ -75,3 +72,14 @@
     <img src="/theme/flatui/images/thumbnail.jpg" width='640px'>
 </div>
 <!-- /thumbnail -->
+
+<!-- Page Loader -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+        </div>
+    </div>
+</div>

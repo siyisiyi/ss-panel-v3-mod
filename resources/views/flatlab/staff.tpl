@@ -18,7 +18,9 @@
 				<header class="page-header">
 					<h1 class="page-title">STAFF</h1>
 				</header>
-				<p>本程序参与人员列表。</p>
+				<p class="lead">免责声明</p>
+				<p>您当前所访问的站点使用的是下面所提到的开源程序。您能看到这个页面仅代表这个站点使用了本程序，其使用过程中发生的一切问题需要其自行解决，本程序不承担任何责任。</p>
+				<p class="lead">本程序参与人员列表。</p>
 				<p>此列表为参与到 <a href="https://github.com/glzjin/ss-panel-v3-mod" target="_blank">ss-panel-v3 glzjin mod {$config["version"]}</a> 中的人员，在此表示感谢。</p>
 				
 				<div class="col-md-3">

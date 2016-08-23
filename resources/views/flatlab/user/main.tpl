@@ -1,3 +1,9 @@
+<!--
+    Flat Panel
+    Author: siyi41 https://telegram.me/siyi41
+    forked from glzjin https://github.com/glzjin/ss-panel-v3-mod 
+ -->
+ 
 <!DOCTYPE html>
 <html lang="zh">
   <head>
