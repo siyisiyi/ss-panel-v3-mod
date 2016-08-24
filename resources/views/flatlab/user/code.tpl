@@ -23,7 +23,7 @@
                                   </button>
 	                                    <p><i class="fa fa-money"></i>
 	                                    &nbsp;账户余额: <strong>{$user->unusedTraffic()}</strong>
-	                                    <span style="float:right;">1GB ≈ 1 元</span>
+	                                    <span style="float:right;">限时5折 2GB ≈ 1 元</span>
 	                                    </p>
 	                            </div>
 	                        </div>
