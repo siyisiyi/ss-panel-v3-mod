@@ -105,7 +105,7 @@
                 <p>实际消耗流量以服务器记录为准。</p>
                 <p>*开通费为一次性收费。实际消耗流量仍需另行付费。2GB≈1元**。</p>
                 <p>**中转加速为精品线路，流量比例为1.5倍。2GB≈1.5元。</p>
-                <p>限时5折活动截止至8月28日23:59，之后恢复为流量1GB≈1元，精品线路1GB≈1.5元
+                <p>***限时5折活动截止至8月28日23:59，之后恢复为流量1GB≈1元，精品线路1GB≈1.5元
                               </div>
               <!-- coupon dialog -->
 					<div class="modal fade modal-dialog-center " id="coupon_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

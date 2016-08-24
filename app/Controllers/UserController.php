@@ -1529,9 +1529,9 @@ class UserController extends BaseController
         $res['msg'] = sprintf("获得了 %u MB流量.", $traffic);
         $res['ret'] = 1;
         if ($traffic/Config::get('checkinMax')>0.8)
-        	Telegram::Send($user->user_name." 人品爆发，竟然获得了 ".$traffic." MB流量，令人好不羡慕~");
+        	Telegram::Send($this->$user->user_name." 人品爆发，竟然获得了 ".$traffic." MB流量，令人好不羡慕~");
         else
-        	Telegram::Send($user->user_name." 按时打卡，幸运地捡到了 ".$traffic." MB流量");
+        	Telegram::Send($this->$user->user_name." 按时打卡，幸运地捡到了 ".$traffic." MB流量");
         return $this->echoJson($response, $res);
     }
 

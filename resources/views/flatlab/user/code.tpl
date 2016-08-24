@@ -43,7 +43,7 @@
 	                                  <div class="twt-write col-sm-12" style="margin-top:55px;">
 	                                  	<div class="iconic-input">
 											<i class="fa fa-rmb"></i>
-		                                    <input class="form-control" type="text" placeholder="充值流量" id="amount">
+		                                    <input class="form-control" type="text" placeholder="充值金额" id="amount">
 		                                </div>
 	                                  </div>
 	                                  <footer class="twt-footer">
@@ -208,9 +208,13 @@
 		}
 		
 		$("#alipay-update").click(function(){
-			if($("#amount").val()!="")
+			if(parseFloat($("#amount").val())>="5")
 			{
 				alipay();
+			}
+			else {
+				$("#result").modal();
+				$("#msg").html("10元以下手续费超贵，所以麻烦至少充值5元，否则我们入不敷出。谢谢！");
 			}
 		})
 		{/if}
