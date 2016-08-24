@@ -1131,6 +1131,8 @@ class UserController extends BaseController
 		
 		$res['ret'] = 1;
         $res['msg'] = "购买成功";
+
+        Telegram::Send($user->user_name." 扔出一张黑金卡:\"这片鱼塘我包了！\"购买了 ".$shop->name." 服务~");
 		
 		return $response->getBody()->write(json_encode($res));
     }
@@ -1226,6 +1228,7 @@ class UserController extends BaseController
 			$subject = Config::get('appName')."-新工单被开启";
 			$to = $user->email;
 			$text = "管理员您好，有人开启了新的工单，请您及时处理。。" ;
+			Telegram::Send("某人看管理猿太闲，扔出一张工单抱怨服务太差劲~");
 			try {
 				Mail::send($to, $subject, 'news/warn.tpl', [
 					"user" => $user,"text" => $text
@@ -1525,6 +1528,10 @@ class UserController extends BaseController
         $this->user->save();
         $res['msg'] = sprintf("获得了 %u MB流量.", $traffic);
         $res['ret'] = 1;
+        if ($traffic/Config::get('checkinMax')>0.8)
+        	Telegram::Send($user->user_name." 人品爆发，竟然获得了 ".$traffic." MB流量，令人好不羡慕~");
+        else
+        	Telegram::Send($user->user_name." 按时打卡，幸运地捡到了 ".$traffic." MB流量");
         return $this->echoJson($response, $res);
     }
 
@@ -1558,6 +1565,7 @@ class UserController extends BaseController
         $user->delete();
         $res['ret'] = 1;
         $res['msg'] = "GG!您的帐号已经从我们的系统中删除.";
+        Telegram::Send("很遗憾".$user->user_name."和我们八字不合，愤然离去");
         return $this->echoJson($response, $res);
     }
 

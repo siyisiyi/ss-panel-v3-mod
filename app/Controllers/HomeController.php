@@ -269,7 +269,7 @@ class HomeController extends BaseController
 						
 						$user=User::find($trade->userid);
 						//$user->money=$user->money+$_POST['total_fee'];
-						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024);
+						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024*2);
 						$user->save();
 						
 						$codeq=new Code();
@@ -282,7 +282,7 @@ class HomeController extends BaseController
 						$codeq->save();
 					  
 					  
-						
+						Telegram::Send("喵~感谢".$user->user_name."大人对我们的支持！一掷千金！");
 						
 						if($user->ref_by!=""&&$user->ref_by!=0&&$user->ref_by!=NULL)
 						{
@@ -318,7 +318,7 @@ class HomeController extends BaseController
 						
 						$user=User::find($trade->userid);
 						//$user->money=$user->money+$_POST['total_fee'];
-						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024);
+						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024*2);
 						$user->save();
 						
 						$codeq=new Code();
@@ -330,7 +330,7 @@ class HomeController extends BaseController
 						$codeq->userid=$user->id;
 						$codeq->save();
 					  
-					  
+					  	Telegram::Send("喵~感谢".$user->user_name."大人对我们的支持！一掷千金！");
 						
 						
 						if($user->ref_by!=""&&$user->ref_by!=0&&$user->ref_by!=NULL)

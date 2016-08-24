@@ -21,6 +21,7 @@ use App\Utils\Duoshuo;
 use App\Utils\GA;
 use App\Utils\Wecenter;
 use App\Utils\Geetest;
+use App\Utils\Telegram;
 
 
 
@@ -376,6 +377,8 @@ class AuthController extends BaseController
 				$c->delete();
 			}
 			
+			Telegram::Send("欢迎新同学".$user->user_name."突破重围加入我们~");
+
             return $response->getBody()->write(json_encode($res));
         }
         $res['ret'] = 0;
