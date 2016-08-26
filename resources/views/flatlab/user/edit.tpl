@@ -23,13 +23,13 @@
 
                     <ul class="nav nav-pills nav-stacked">
                         <li class="active">
-                        	<a class="navLink" href="#accountSetting"; role="tab" data-toggle="tab"><i class="fa fa-user"></i> 账户设置</a>
+                        	<a data-toggle="tab" href="#home-2"><i class="fa fa-user"></i> 账户设置</a>
                         </li>
                         <li>
-                        	<a class="navLink" href="#connectSetting" role="tab" data-toggle="tab"> <i class="fa fa-calendar"></i> 连接设置</a>
+                        	<a data-toggle="tab" href="#about-2"><i class="fa fa-calendar"></i> 连接设置</a>
                         </li>
                         <li>
-                        	<a class="navLink" href="#others" role="tab" data-toggle="tab"> <i class="fa fa-edit"></i>其他设置</a>
+                        	<a data-toggle="tab" href="#contact-2"> <i class="fa fa-edit"></i>其他设置</a>
                         </li>
                     </ul>
 
@@ -90,6 +90,28 @@
                                                                 &nbsp;修改</button>
                                                             </div>
                                                             <!-- END CHANGE PASSWORD  -->
+                                                            <!-- THEME -->
+                                                            <div class="form-group">
+                                                                <h3>主题修改</h3>
+                                                                <p>当前主题：
+                                                                <label class="label label-inverse">
+                                                                {$user->theme}
+                                                                </label>
+                                                                </p>
+                                                                <select class="form-control" id="theme">
+                                                                    <option>选择主题</option>
+                                                                    <option>-------------</option>
+                                                                    {foreach $themes as $theme}
+                                                                    <option value="{$theme}">{$theme}</option>
+                                                                    {/foreach}
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <button class="btn btn-info " id="theme-update" >
+                                                                <i class="fa fa-check-square-o"></i>
+                                                                &nbsp;修改</button>
+                                                            </div>
+                                                            <!-- END THEME -->
                                                             <!-- CONTACT INFO -->
                                                             <div class="form-group">
                                                                 <h3>联系方式</h3>

@@ -90,12 +90,14 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
+                  {if $user->isAdmin()}
                   <li>
                     <a href="/admin" id="navAdmin">
                       <i class="icon-speedometer"></i>
                       <span>管理面板</span>
                     </a>
                   </li>
+                  {/if}
 
                   <li>
                       <a href="/user" id="navUser">
