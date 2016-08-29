@@ -269,7 +269,7 @@ class HomeController extends BaseController
 						
 						$user=User::find($trade->userid);
 						//$user->money=$user->money+$_POST['total_fee'];
-						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024*2);
+						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024);
 						$user->save();
 						
 						$codeq=new Code();

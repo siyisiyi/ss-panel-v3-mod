@@ -90,6 +90,7 @@ $app->group('/user', function () {
 	$this->get('/announcement', 'App\Controllers\UserController:announcement');
 	$this->get('/donate', 'App\Controllers\UserController:donate');
 	$this->get('/lookingglass', 'App\Controllers\UserController:lookingglass');
+	$this->get('/map', 'App\Controllers\UserController:map');
 	$this->get('/node/{id}', 'App\Controllers\UserController:nodeInfo');
 	$this->get('/node/{id}/ajax', 'App\Controllers\UserController:nodeAjax');
 	$this->get('/profile', 'App\Controllers\UserController:profile');

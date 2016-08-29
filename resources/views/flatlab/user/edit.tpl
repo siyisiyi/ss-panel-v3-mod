@@ -234,7 +234,7 @@
                                                                 </select>
                                                             </div>
                                                             <div class="form-group">
-                                                                <button class="btn btn-info" ><i class="fa fa-check-square-o"></i>&nbsp;提交</button>
+                                                                <button class="btn btn-info" id="method-update"><i class="fa fa-check-square-o"></i>&nbsp;提交</button>
                                                             </div>
                                                             <!-- END ENCRYPTION METHOD -->
                                                             <!-- PROTOCOL -->

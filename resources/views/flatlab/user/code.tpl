@@ -23,7 +23,7 @@
                                   </button>
 	                                    <p><i class="fa fa-money"></i>
 	                                    &nbsp;账户余额: <strong>{$user->unusedTraffic()}</strong>
-	                                    <span style="float:right;">限时5折 2GB ≈ 1 元</span>
+	                                    <span style="float:right;">1GB ≈ 1 元</span>
 	                                    </p>
 	                            </div>
 	                        </div>
@@ -35,7 +35,7 @@
 					<section class="panel">
 	                                  <div class="twt-feed blue-bg">
 	                                      <h1>支付宝充值</h1>
-	                                      <p>在线充值，最低10GB</p>
+	                                      <p>在线充值，最低5GB</p>
 	                                      <a href="#">
 	                                          <img src="/theme/flatlab/images/alipay-logo.png" alt="Alipay Logo" width="120px" />
 	                                      </a>

@@ -115,6 +115,14 @@ class UserController extends BaseController
 		
         return $this->view()->assign('speedtest',$Speedtest)->assign('hour',Config::get('Speedtest_duration'))->display('user/lookingglass.tpl');
     }
+
+    public function map($request, $response, $args)
+    {
+		
+		$Speedtest=Speedtest::where("datetime",">",time()-Config::get('Speedtest_duration')*3600)->orderBy('datetime','desc')->get();
+		
+        return $this->view()->assign('speedtest',$Speedtest)->assign('hour',Config::get('Speedtest_duration'))->display('user/map.tpl');
+    }
 	
 	
 	
