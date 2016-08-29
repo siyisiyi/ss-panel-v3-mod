@@ -56,7 +56,7 @@
 					{/if}
 				</div>
 				<!-- reload code -->
-				<div class="col-md-5">
+				<!-- <div class="col-md-5">
 					<section class="panel">
 	                                  <div class="twt-feed" style="background-color:#78CD51;">
 	                                      <h1>充值码充值</h1>
@@ -77,8 +77,45 @@
 	                                      </button>
 	                                  </footer>
 	                              </section>
-				</div>
+				</div> -->
 				<!-- end reload code -->
+				<!-- Paypal -->
+				<div class="col-md-5">
+					<section class="panel">
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="ETESCM3V2YDTW">
+	                                  <div class="twt-feed" style="background-color:#0070ba;">
+	                                      <h1>Paypal</h1>
+	                                      <p>For international customer</p>
+	                                      <a href="#" style="background-color:#fff;">
+	                                          <img src="/theme/flatlab/images/paypal-logo.png" alt="paypal logo" width="120px" />
+	                                      </a>
+	                                  </div>
+	                                  <div class="twt-write col-sm-12" style="margin-top:55px;">
+	                                  	<div class="iconic-input">
+											<!-- <i class="fa fa-barcode"></i> -->
+		                                    <!-- <input class="form-control" type="text" placeholder="充值码" id="code"> -->
+		                                    <input type="hidden" name="on0" value="流量">
+		                                    <select class="form-control" name="os0">
+												<option value="4 GB">4 GB $ 1.00 USD</option>
+												<option value="8 GB">8 GB $ 2.00 USD</option>
+												<option value="20 GB">20 GB $ 5.00 USD</option>
+												<option value="40 GB">40 GB $ 10.00 USD</option>
+												<option value="80 GB">80 GB $ 20.00 USD</option>
+											</select>
+											<input type="hidden" name="currency_code" value="USD">
+		                                </div>
+	                                  </div>
+	                                  <footer class="twt-footer">
+	                                      <button class="btn btn-block" type="submit" name="submit" style="background-color:#0070ba;color:#fff;">
+	                                          Check out with Paypal
+	                                      </button>
+	                                  </footer>
+	                        </form>
+	                    </section>
+				</div>
+				<!-- end Paypal -->
 			<div class="col-lg-10 col-lg-offset-1">
 				<div class="row">
 					{if $pmw!='0'}
