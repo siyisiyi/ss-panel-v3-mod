@@ -34,9 +34,9 @@
 										<p><a href="/downloads/client/ssr_3.0.2.2.apk"><i class="fa fa-android"></i>&nbsp;Android</a></p>
 										<p><a href="https://itunes.apple.com/cn/app/potatso-yi-jian-shi-pin-app/id1070901416?mt=8"><i class="fa fa-apple"></i>&nbsp;iOS</a></p>
 						<h5>自动配置</h5>
-						<p><a href="{$ssqr}" class="btn btn-primary">安装旧版软件的手机用默认浏览器点击直接添加配置</a></p>
+						<!-- <p><a href="{$ssqr}" class="btn btn-primary">安装旧版软件的手机用默认浏览器点击直接添加配置</a></p> -->
 										{if $config['enable_rss']=='true'&&$node->custom_rss==1&&!($user->obfs=='plain'&&$user->protocol=='origin')}
-										<p><a href="{$ssqr_s_new}" class="btn btn-primary">安装新版软件的手机用默认浏览器点击直接添加配置</a></p>
+										<p><a href="{$ssqr_s_new}" class="btn btn-primary">手机用默认浏览器点击直接添加配置</a></p>
 										{/if}
 						<h5>配置地址</h5>
 						<input id="ss-qr-text" class="form-control" value="{$ssqr_s}">
