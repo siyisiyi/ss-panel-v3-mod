@@ -44,8 +44,8 @@
 						<h5>SSR二维码</h5>
 						<div id="ss-qr-n"></div>
 						{/if}
-						<h5>SS二维码</h5>
-						<div id="ss-qr"></div>
+						<!-- <h5>SS二维码</h5>
+						<div id="ss-qr"></div> -->
 						<h5>配置Json</h5>
 						<textarea class="form-control" rows="6">{$json_show}</textarea>
 
@@ -63,10 +63,10 @@
 <script src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 <script>
 (function($) { 
-	var text_qrcode = '{$ssqr_s}';
-	jQuery('#ss-qr').qrcode({
-		"text": text_qrcode
-	});
+	// var text_qrcode = '{$ssqr_s}';
+	// jQuery('#ss-qr').qrcode({
+	// 	"text": text_qrcode
+	// });
 	
 	{if $config['enable_rss']=='true'&&$node->custom_rss==1&&!($user->obfs=='plain'&&$user->protocol=='origin')}
 	
