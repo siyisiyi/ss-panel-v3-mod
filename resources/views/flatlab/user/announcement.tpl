@@ -18,7 +18,7 @@
 
 			<div class="col-lg-10 col-lg-offset-1">
 				{foreach $anns as $ann}
-                    <section class="panel" id="#{$ann->id}">
+                    <section class="panel" id="{$ann->id}">
                         <header class="panel-heading bold" style="color:#667fa0;">
                               <i class="fa fa-inbox"></i>&nbsp;公告&nbsp;#{$ann->id}&nbsp;
                               <span style="color:#acacac;font-size:12px;">{$ann->date}</span>

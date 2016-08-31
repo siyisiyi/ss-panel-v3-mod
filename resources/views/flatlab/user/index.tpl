@@ -228,7 +228,7 @@
                                           <h1>Android <a class="downloads" href="/downloads/client/ssr_3.0.2.2.apk">下载这个</a>，安装，然后在手机上默认浏览器中点击<a class="downloads" href="{$android_add}">这个</a>，然后一直点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。(此方法还在测试中，可能会出现问题)</h1>
                                       </div>
                                       <div role="tabpanel" class="item tab-pane" id="ios">
-                                          <h1>iOS 购买<a class="downloads" href="https://itunes.apple.com/cn/app/potatso-yi-jian-shi-pin-app/id1070901416?mt=8" target="_blank">土豆丝</a>或者<a href="https://itunes.apple.com/cn/app/shadowrocket-for-shadowsocks/id932747118" target="_blank" class="downloads">小火箭</a>，觉得贵就淘宝或者查看本站的<a class="downloads" href="/user/announcement">共享账号</a>，然后扫描二维码或者手动输入服务器信息即可。Surge配置文件<a href="/downloads/GoSiyi_Surge.conf" class="downloads">点击下载</a>。ShadowRocket配置文件<a class="downloads" href="/downloads/gosiyi_sr.conf">点击下载</a></h1>
+                                          <h1>iOS 购买<a class="downloads" href="https://itunes.apple.com/cn/app/potatso-yi-jian-shi-pin-app/id1070901416?mt=8" target="_blank">土豆丝</a>或者<a href="https://itunes.apple.com/cn/app/shadowrocket-for-shadowsocks/id932747118" target="_blank" class="downloads">小火箭</a>，觉得贵就淘宝或者查看本站的<a class="downloads" href="/user/announcement#2">共享账号</a>，然后扫描二维码或者手动输入服务器信息即可。Surge配置文件<a href="/downloads/GoSiyi_Surge.conf" class="downloads">点击下载</a>。ShadowRocket配置文件<a class="downloads" href="/downloads/gosiyi_sr.conf">点击下载</a></h1>
                                       </div>
                                   </div>
                               </div>
