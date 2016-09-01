@@ -730,7 +730,7 @@ class Job
 			}
 			
 			
-			if((int)Config::get('enable_auto_clean_unused_days')!=0 && $user->t+((int)Config::get('enable_auto_clean_unused_days')*86400)<time() && $user->t+((int)Config::get('enable_auto_clean_unused_days')*86400)>=time()-60 && $user->class == 0)
+			if((int)Config::get('enable_auto_clean_unused_days')!=0 && $user->t+((int)Config::get('enable_auto_clean_unused_days')*86400)<time() && $user->t+((int)Config::get('enable_auto_clean_unused_days')*86400)>=time()-60 && $user->class == 0 &&$user->money == 0)
 			{
 				if(Config::get('enable_auto_clean_unused')=='true')
 				{

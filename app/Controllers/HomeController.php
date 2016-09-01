@@ -268,7 +268,7 @@ class HomeController extends BaseController
 						
 						
 						$user=User::find($trade->userid);
-						//$user->money=$user->money+$_POST['total_fee'];
+						$user->money=$user->money+$_POST['total_fee'];
 						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024);
 						$user->save();
 						
@@ -317,7 +317,7 @@ class HomeController extends BaseController
 						//logResult("这里写入想要调试的代码变量值，或其他运行的结果记录");
 						
 						$user=User::find($trade->userid);
-						//$user->money=$user->money+$_POST['total_fee'];
+						$user->money=$user->money+$_POST['total_fee'];
 						$user->transfer_enable=$user->transfer_enable+ceil($_POST['total_fee']*1024*1024*1024*2);
 						$user->save();
 						
