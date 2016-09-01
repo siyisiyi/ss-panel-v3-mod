@@ -185,6 +185,7 @@
                                                         <li><a href="https://itunes.apple.com/tc/app/shadowsocks/id665729974?mt=8"
                                                                class="btn btn-primary" target="_blank">ShadowSocks</a></li>
                                                     </ul>
+                                                    <p>或者前往<a href="/user/announcement#2">公告中心</a>使用共享账户下载</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -197,7 +198,7 @@
                                                         <a href="http://apt.thebigboss.org/onepackage.php?bundleid=com.linusyang.shadowsocks" class="btn btn-primary" target="_blank">ShadowSocks</a>
                                                     </p>
                                                     <p>PP助手：</p>
-                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/Surge_pp.ipa'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
+                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/Surge_pp.ipa'; $(this).next().show(300)" class="btn btn-primary">下载Surge</button>
                                                     <p class="text-success" style="display:none; margin-top: 20px">正在处理下载请求，请稍后</p>
                                                 </div>
                                             </div>
@@ -207,7 +208,7 @@
                             </div>
                         </div>
                         <h4>简单配置</h4>
-                        <p>下载完成后，将压缩包内的所有文件解压。添加服务器至客户端</p>
+                        <!-- <p>下载完成后，将压缩包内的所有文件解压。添加服务器至客户端</p> -->
                         <p><strong>打开 <a href="/user/node" target="_blank">服务器页面</a></strong></p>
 
                         <div class="tabbable">
@@ -224,24 +225,47 @@
                                             <a>如果你的手机无法扫描二维码，请手动设置节点信息</a>
                                         </div>
                                         <p>
-                                            iOS 客户端：
+                                            ShadowRocket：
                                         </p>
 
                                         <ol>
-                                            <li>选择一个节点，点击名字查看节点详情</li>
-                                            <li>打开手机客户端，使用客户端中的扫描功能扫描配置二维码</li>
-                                            <li>扫描成功后，节点信息将会被自动添加</li>
-                                            <li>点击按钮启动App</li>
+                                            <li>点击右上角“+”添加配置</li>
+                                            <li>Type选择ShadowsocksR</li>
+                                            <li>根据节点详细配置填写地址Host,端口Port,密码Password,加密方式Method,协议Protocol,混淆Obfuscation以及参数Parameter</li>
+                                            <li>点击Done完成配置，选择节点后点击Not Connected旁边的开关开启连接即可上网</li>
+                                            <li>*进阶配置地址:<a href="/downloads/gosiyi_sr.conf">{$config["baseUrl"]}/downloads/gosiyi_sr.conf</a></li>
                                         </ol>
 
                                         <p>
-                                            安卓客户端：
+                                            Potatso
+                                        </p>
+
+                                        <ol>
+                                            <li>选择管理->代理->点击右上角"+"添加代理</li>
+                                            <li>代理类型选择ShadowsocksR</li>
+                                            <li>根据节点详细配置填写地址Host,端口Port,密码Password,加密方式Method,协议Protocol,混淆Obfuscation以及参数Parameter</li>
+                                            <li>返回Potatso首页点击连接即可上网</li>
+                                        </ol>
+
+                                        <p>
+                                            Surge
+                                        </p>
+
+                                        <ol>
+                                            <li>添加配置: <a href="/downloads/GoSiyi_Surge.conf">{$config["baseUrl"]}/downloads/GoSiyi_Surge.conf</a></li>
+                                            <li>选择Config->Edit Configuration</li>
+                                            <li>编辑Proxy,改为自己的端口、加密方式和密码</li>
+                                            <li>保存配置，返回主界面点击开关连接上网</li>
+                                        </ol>
+
+                                        <p>
+                                            安卓 ShadowsocksR：
                                         </p>
 
                                         <ol>
                                             <li>下载，安装并打开App。</li>
-                                            <li>选择一个节点，点击名字查看节点详情</li>
-                                            <li>使用App扫描配置二维码或者点击ss://开头的链接</li>
+                                            <li>使用系统默认浏览器选择一个节点，点击名字查看节点详情</li>
+                                            <li>点击添加配置按钮或者扫描二维码添加</li>
                                             <li>找到App界面右上角的纸飞机图标。点击纸飞机图标，App会向您询问相应的权限</li>
                                             <li>当纸飞机图标变成勾时，表示App在您的手机设备上正常运行</li>
                                         </ol>
@@ -250,8 +274,10 @@
                                 <div class="tab-pane" id="tab7">
                                     <div class="row">
                                         <ol>
-                                            <li>手动设置节点信息</li>
-                                            <li></li>
+                                            <li>下载、解压</li>
+                                            <li>登录到<a href="/user">用户中心</a>，下载<a href="/user/getpcconf">配置文件</a>放到程序目录下</li>
+                                            <li>运行程序，选择一个合适的服务器，更新一下PAC为绕过国内IP</li>
+                                            <li>开启系统代理即可上网，不过找不见图标请查看右下角系统图标里</li>
                                             <li>如果您想加速您的游戏，请将&ldquo;系统代理模式&rdquo;设置为&ldquo;全局&rdquo;</li>
                                         </ol>
                                     </div>
@@ -266,14 +292,14 @@
                                             <li>下载安装客户端</li>
                                             <li>选择一个节点，点击名字查看节点详情</li>
                                             <li>在节点详情中，您可以看到节点地址Host，端口Port，密码Password与加密方式Method</li>
-                                            <li>将服务器信息填入客户端，选择连接方式Type为Shadowsocks</li>
+                                            <li>将服务器信息填入客户端，选择连接方式Type为ShadowsocksR</li>
                                         </ol>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <p>
+                        <!-- <p>
                             电脑客户端：
                         </p>
 
@@ -281,14 +307,14 @@
                             <li>右键点击任务栏里的纸飞机图标，在&ldquo;服务器&rdquo;中勾选一台服务器</li>
                             <li>右键点击任务栏里的纸飞机图标，在&ldquo;系统代理模式&rdquo;中勾选&ldquo;PAC模式&rdquo;</li>
                             <li>右键点击任务栏里的纸飞机图标，勾选&ldquo;启用系统代理&rdquo;</li>
-                        </ol>
+                        </ol> -->
 
                         <h4>打开浏览器，畅游真正的互联网吧！</h4>
 
                         <ol>
                             <li>如果您发现无法打开网站，请在在&ldquo;系统代理模式&rdquo;中勾选&ldquo;全局模式&rdquo;</li>
                             <li>如果您仍然无法打开网站，请仔细阅读上方说明，并检查是否配置错误，或
-                            <span title="" data-placement="right" data-toggle="tooltip" class="btn btn-primary" data-original-title="wx:C159800221">联系管理员</span>
+                            <span title="" data-placement="right" data-toggle="tooltip" class="label label-primary" data-original-title="wx:C159800221">联系管理员</span>
                             </li>
                         </ol>
                     </div>
