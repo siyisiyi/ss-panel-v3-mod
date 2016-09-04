@@ -165,10 +165,10 @@
 			{/if}
 
             var emailAdd = $("#email").val();
-            if (emailAdd.indexOf('qq.com') >= 0)
+            if (emailAdd.indexOf('qq.com') >= 0 ||emailAdd.indexOf('chacuo.net') >= 0 || emailAdd.indexOf('yopmail.com') >= 0 || emailAdd.indexOf('mailnesia.com') >= 0 || emailAdd.indexOf('guerrillamail.com') >= 0 || emailAdd.indexOf('spambox.us') >= 0 || emailAdd.indexOf('trashmail.net') >= 0 || emailAdd.indexOf('mvrht.com') >= 0 || emailAdd.indexOf('bccto.me') >= 0)
             {
                 $("#result").modal();
-                $("#msg").html("请勿使用QQ邮箱。");
+                $("#msg").html("不支持该邮箱。");
                 return;
             }
 

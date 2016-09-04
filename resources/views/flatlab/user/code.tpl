@@ -85,6 +85,10 @@
 						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 							<input type="hidden" name="cmd" value="_s-xclick">
 							<input type="hidden" name="hosted_button_id" value="ETESCM3V2YDTW">
+							<input type="hidden" name="currency_code" value="USD">
+							<input type="hidden" name="cancel_return" value="https://v.gosiyi.com/user/code">
+							<input type="hidden" name="return" value="https://v.gosiyi.com/user/code">
+							<input type="hidden" name="notify_url" value="https://v.gosiyi.com/paypal_callback"> 
 	                                  <div class="twt-feed" style="background-color:#0070ba;">
 	                                      <h1>Paypal</h1>
 	                                      <p>For international customer</p>
@@ -94,8 +98,6 @@
 	                                  </div>
 	                                  <div class="twt-write col-sm-12" style="margin-top:55px;">
 	                                  	<div class="iconic-input">
-											<!-- <i class="fa fa-barcode"></i> -->
-		                                    <!-- <input class="form-control" type="text" placeholder="充值码" id="code"> -->
 		                                    <input type="hidden" name="on0" value="流量">
 		                                    <select class="form-control" name="os0">
 												<option value="4 GB">4 GB $ 1.00 USD</option>
@@ -104,7 +106,6 @@
 												<option value="40 GB">40 GB $ 10.00 USD</option>
 												<option value="80 GB">80 GB $ 20.00 USD</option>
 											</select>
-											<input type="hidden" name="currency_code" value="USD">
 		                                </div>
 	                                  </div>
 	                                  <footer class="twt-footer">

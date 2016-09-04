@@ -178,12 +178,6 @@
                                         <div class="col-md-12">
                                             <div class="portlet light ">
                                                 <div class="portlet-title tabbable-line">
-                                                    <!-- <div class="caption caption-md">
-                                                        <i class="icon-globe theme-font hide"></i>
-                                                        <span class="caption-subject font-blue-madison bold">
-                                                        	
-                                                        </span>
-                                                    </div> -->
                                                     <ul class="nav nav-tabs">
                                                         <li class="active">
                                                             <a href="#tab_1_1" data-toggle="tab">账户设置</a>
@@ -239,6 +233,9 @@
                                                                 {if $user->im_type==3}
                                                                 Google+
                                                                 {/if}
+                                                                {if $user->im_type==4}
+                                                                Telegram
+                                                                {/if}
                                                                 {$user->im_value}
                                                                 </p>
                                                                 <select class="form-control" id="imtype">
@@ -247,6 +244,7 @@
                                                                     <option value="1">微信</option>
                                                                     <option value="2">QQ</option>
                                                                     <option value="3">Google+</option>
+                                                                    <option value="4">Telegram</option>
                                                                 </select>
                                                             </div>
                                                             <div class="form-group">
@@ -371,7 +369,7 @@
                                                                 </select>
                                                             </div>
                                                             <div class="form-group">
-                                                                <button class="btn btn-sm blue" ><i class="fa fa-check-square-o"></i>&nbsp;提交</button>
+                                                                <button class="btn btn-sm blue" id="method-update" ><i class="fa fa-check-square-o"></i>&nbsp;提交</button>
                                                             </div>
                                                             <!-- END ENCRYPTION METHOD -->
                                                             <!-- PROTOCOL -->
@@ -380,7 +378,6 @@
                                                             <p>当前协议参数：{$user->protocol_param}</p>
                                                             <div class="alert alert-block alert-warning fade in">
                                                                 <button type="button" class="close" data-dismiss="alert"></button>
-                                                                <p><i class="fa fa-warning"></i>&nbsp;注意：如果需要在手机使用SS请选择带_compatible的兼容选项！</p>
                                                                 <p> <i class="fa fa-warning"></i>&nbsp;注意：参数请放空，除非你看得懂<a href="https://github.com/breakwa11/shadowsocks-rss/blob/master/ssr.md">这里</a>！
                                                                 </p>
                                                             </div>
@@ -391,12 +388,9 @@
                                                                     <option value="verify_simple">verify_simple</option>
                                                                     <option value="verify_deflate">verify_deflate</option>
                                                                     <option value="verify_sha1">verify_sha1</option>
-                                                                    <option value="verify_sha1_compatible">verify_sha1_compatible</option>
                                                                     <option value="auth_simple">auth_simple</option>
                                                                     <option value="auth_sha1">auth_sha1</option>
-                                                                    <option value="auth_sha1_compatible"> auth_sha1_compatible</option>
                                                                     <option value="auth_sha1_v2">auth_sha1_v2</option>
-                                                                    <option value="auth_sha1_v2_compatible">auth_sha1_v2_compatible</option>
                                                                 </select>
                                                             </div>
                                                             
@@ -411,21 +405,11 @@
                                                                 <select id="obfs" class="form-control">
                                                                     <option value="plain">plain</option>
                                                                     <option value="http_simple">http_simple</option>
-                                                                    <option value="http_simple_compatible"> http_simple_compatible</option>
                                                                     <option value="tls_simple">tls_simple</option>
-                                                                    <option value="tls_simple_compatible">tls_simple_compatible</option>
                                                                     <option value="random_head">random_head</option>
-                                                                    <option value="random_head_compatible">random_head_compatible</option>
-                                                                    <option value="tls1.0_session_auth">tls1.0_session_auth</option>
-                                                                    <option value="tls1.0_session_auth_compatible">tls1.0_session_auth_compatible</option>
+                                                                    <option value="tls1.0_session_auth">
                                                                     <option value="tls1.2_ticket_auth">tls1.2_ticket_auth</option>
-                                                                    <option value="tls1.2_ticket_auth_compatible">tls1.2_ticket_auth_compatible</option>
                                                                 </select>
-                                                            </div>
-                                                            
-                                                            <div class="form-group form-group-label">
-                                                                <label class="floating-label" for="obfs_param">混淆参数</label>
-                                                                <input class="form-control" id="obfs_param" type="text">
                                                             </div>
                                                             <div class="form-group">
                                                                 <button class="btn btn-sm blue" id="rss-update" ><i class="fa fa-check-square-o">check</i>&nbsp;修改</button>

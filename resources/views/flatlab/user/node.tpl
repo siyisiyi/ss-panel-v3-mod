@@ -27,7 +27,8 @@
                     <button data-dismiss="alert" class="close close-sm" type="button">
                         <i class="fa fa-times"></i>
                     </button>
-                    <p><strong><i class="fa fa-warning"></i>注意: </strong>请勿在任何地方公开节点地址！</p>
+                    <p><strong><i class="fa fa-warning"></i>注意: </strong>目前有免费线路5条，付费线路2条</p>
+                    <p>会员可使用日本IDCF(移动联通)以及阿里云香港B(三网)</p>
                     <p>流量比例为0.5即使用1000MB按照500MB流量记录记录结算。</p>
                     <p>点击下方按钮可查看详细连接配置。</p>
               </div>
@@ -46,7 +47,9 @@
                                   {else}
                                   <span class="badge bg-danger"><i class="fa fa-exclamation-triangle"></i></span>
                                   {/if}{/if}
-                                  <span>{$prefix} | <i class="fa fa-user"></i> {$node_alive[$prefix]} | <i class="fa fa-wrench"></i> {$node_method[$prefix]} | <i class="fa fa-download"></i> {if isset($node_bandwidth[$prefix])==true}{$node_bandwidth[$prefix]}{else}N/A{/if}</span>
+                                  <span>{$prefix} | <i class="fa fa-user"></i> {$node_alive[$prefix]} | <i class="fa fa-wrench"></i> {$node_method[$prefix]}
+                                  {if $user->isAdmin()}
+                                   | <i class="fa fa-download"></i> {if isset($node_bandwidth[$prefix])==true}{$node_bandwidth[$prefix]}{else}N/A{/if}{/if}</span>
                     </div>
                     <div class="panel-body">
                       {foreach $nodes as $node}

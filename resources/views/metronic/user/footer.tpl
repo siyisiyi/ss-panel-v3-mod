@@ -18,12 +18,18 @@
 <script src="/theme/metronic/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
-        <script src="/theme/metronic/global/plugins/jquery.min.js" ></script>
-        <script src="/theme/metronic/global/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/theme/metronic/global/plugins/js.cookie.min.js" ></script>
-        <script src="/theme/metronic/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" ></script>
-        <script src="/theme/metronic/global/plugins/jquery.blockui.min.js" ></script>
-        <script src="/theme/metronic/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" ></script>
+        <!-- <script src="/theme/metronic/global/plugins/jquery.min.js" ></script> -->
+        <script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
+        <!-- <script src="/theme/metronic/global/plugins/bootstrap/js/bootstrap.min.js"></script> -->
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- <script src="/theme/metronic/global/plugins/js.cookie.min.js" ></script> -->
+        <script src="https://cdn.bootcss.com/js-cookie/2.0.4/js.cookie.min.js"></script>
+        <!-- <script src="/theme/metronic/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" ></script> -->
+        <script src="https://cdn.bootcss.com/jQuery-slimScroll/1.3.2/jquery.slimscroll.min.js"></script>
+        <!-- <script src="/theme/metronic/global/plugins/jquery.blockui.min.js" ></script> -->
+        <script src="https://cdn.bootcss.com/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+        <!-- <script src="/theme/metronic/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" ></script> -->
+        <script src="https://cdn.bootcss.com/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="/theme/metronic/global/scripts/app.min.js" ></script>

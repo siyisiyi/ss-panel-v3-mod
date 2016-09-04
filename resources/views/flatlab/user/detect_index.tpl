@@ -10,7 +10,7 @@
       <section id="main-content">
           <section class="wrapper site-min-height">
             <!-- page start-->
-            <h2 class="page-title"><i class="icon-organization"></i>&nbsp;屏蔽规则 | <small>Fillter Rules</small></h2>
+            <h2 class="page-title"><i class="icon-organization"></i>&nbsp;屏蔽规则 | <small>Filter Rules</small></h2>
 
             <div class="row">
 

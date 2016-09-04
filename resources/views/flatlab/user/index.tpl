@@ -142,12 +142,12 @@
                     <section class="panel">
                           <div id="c-slide" class="carousel slide auto panel-body">
                               <ol class="carousel-indicators out">
-                                  <li class="active" data-slide-to="0" data-target="#c-slide"></li>
+                                  <li class="" data-slide-to="0" data-target="#c-slide"></li>
                                   <li class="" data-slide-to="1" data-target="#c-slide"></li>
-                                  <li class="" data-slide-to="2" data-target="#c-slide"></li>
+                                  <li class="active" data-slide-to="2" data-target="#c-slide"></li>
                               </ol>
                               <div class="carousel-inner">
-                                  <div class="item text-center active">
+                                  <div class="item text-center">
                                       <h3>加入Telegram群，聊天吹水！</h3>
                                       <small class="text-muted"><a href="https://telegram.me/joinchat/D-9Hsgaw1zb9d1zesF2jnA" target="_blank">点击加入</a></small>
                                   </div>
@@ -155,9 +155,9 @@
                                       <h3>关注GoSiyi SS频道，获得最新公告</h3>
                                       <small class="text-muted"><a href="https://telegram.me/joinchat/D-9HskB2CzrfpV0zRVNiZQ" target="_blank">点击加入</a></small>
                                   </div>
-                                  <div class="item text-center">
-                                      <h3>有问题问管理员</h3>
-                                      <small class="text-muted">wx: c159800221</small>
+                                  <div class="item text-center active">
+                                      <h3>有任何问题欢迎咨询</h3>
+                                      <small class="text-muted"><a href="/user/ticket">发工单</a>,<a href="http://wpa.qq.com/msgrd?v=3&uin=159800221&site=qq&menu=yes" target="_blank">QQ</a>或者<a href="https://telegram.me/siyi41" target="_blank">Telegram</a>交谈</small>
                                   </div>
                               </div>
                               <a data-slide="prev" href="#c-slide" class="left carousel-control">
@@ -186,7 +186,7 @@
                                     <li><a href="javascript:;"> <i class="fa fa-calendar"></i> 上次使用 <span class="label label-success pull-right r-activity">{$user->lastSsTime()}</span></a></li>
                                       <li><a href="javascript:;"> <i class="fa fa-trophy"></i> 账号等级 <span class="label label-primary pull-right r-activity">
                                       {if $user->class ==0}
-                                      免费用户
+                                      普通用户
                                       {/if}
                                       {if $user->class ==1}
                                       付费用户
