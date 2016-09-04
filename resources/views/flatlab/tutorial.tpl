@@ -275,7 +275,7 @@
                                     <div class="row">
                                         <ol>
                                             <li>下载、解压</li>
-                                            <li>登录到<a href="/user">用户中心</a>，下载<a href="/user/getpcconf">配置文件</a>放到程序目录下</li>
+                                            <li>登录到<a href="/user">用户中心</a>，下载配置文件放到程序目录下</li>
                                             <li>运行程序，选择一个合适的服务器，更新一下PAC为绕过国内IP</li>
                                             <li>开启系统代理即可上网，不过找不见图标请查看右下角系统图标里</li>
                                             <li>如果您想加速您的游戏，请将&ldquo;系统代理模式&rdquo;设置为&ldquo;全局&rdquo;</li>
