@@ -1484,9 +1484,13 @@ class UserController extends BaseController
     {
         $user = Auth::getUser();
         $pwd = $request->getParam('sspwd');
-        $user->updateSsPwd($pwd);
-        $res['ret'] = 1;
-
+        $isMatched = preg_match('/[\x00-\x7f]/', $pwd);
+        if ($isMatched) {
+	        $user->updateSsPwd($pwd);
+	        $res['ret'] = 1;
+        }
+        else
+        	$res['ret'] = 0;
 
         Radius::Add($user,$pwd);
 

@@ -91,7 +91,7 @@
                                                             </div>
                                                             <!-- END CHANGE PASSWORD  -->
                                                             <!-- THEME -->
-                                                            <div class="form-group">
+                                                            <!-- <div class="form-group">
                                                                 <h3>主题修改</h3>
                                                                 <p>当前主题：
                                                                 <label class="label label-inverse">
@@ -105,7 +105,7 @@
                                                                     <option value="{$theme}">{$theme}</option>
                                                                     {/foreach}
                                                                 </select>
-                                                            </div>
+                                                            </div> -->
                                                             <div class="form-group">
                                                                 <button class="btn btn-info " id="theme-update" >
                                                                 <i class="fa fa-check-square-o"></i>
@@ -603,6 +603,10 @@
 <script>
     $(document).ready(function () {
         $("#ss-pwd-update").click(function () {
+
+            var pattern = /[\x00-\x7f]/;
+            var str = $("#sspwd").val();
+            if (pattern.test(str)) {
             $.ajax({
                 type: "POST",
                 url: "sspwd",
@@ -624,6 +628,11 @@
 					$("#msg").html(data.msg+"     出现了一些错误。");
                 }
             })
+            }
+            else {
+                $("#result").modal();
+                $("#msg").html("包含非法字符！");
+            }
         })
     })
 </script>
