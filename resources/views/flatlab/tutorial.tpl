@@ -241,9 +241,8 @@
                                         </p>
 
                                         <ol>
-                                            <li>选择管理->代理->点击右上角"+"添加代理</li>
-                                            <li>代理类型选择ShadowsocksR</li>
-                                            <li>根据节点详细配置填写地址Host,端口Port,密码Password,加密方式Method,协议Protocol,混淆Obfuscation以及参数Parameter</li>
+                                            <li>选择更多->从二维码导入</li>
+                                            <li>扫描节点详细配置里的二维码并命名</li>
                                             <li>返回Potatso首页点击连接即可上网</li>
                                         </ol>
 
