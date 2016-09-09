@@ -247,7 +247,6 @@
                                                             <div class="form-group form-group-label">
                                                                 <label class="floating-label" for="protocol">协议</label>
                                                                 <select id="protocol" class="form-control">
-                                                                    <option value="origin">origin</option>
                                                                     <option value="verify_simple">verify_simple</option>
                                                                     <option value="verify_deflate">verify_deflate</option>
                                                                     <option value="verify_sha1">verify_sha1</option>
@@ -261,7 +260,6 @@
                                                             <div class="form-group form-group-label">
                                                                 <label class="floating-label" for="obfs">混淆方式</label>
                                                                 <select id="obfs" class="form-control">
-                                                                    <option value="plain">plain</option>
                                                                     <option value="http_simple">http_simple</option>
                                                                     <option value="tls_simple">tls_simple</option>
                                                                     <option value="random_head">random_head</option>
