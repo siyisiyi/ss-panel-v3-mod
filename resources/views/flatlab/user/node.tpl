@@ -27,7 +27,7 @@
                     <button data-dismiss="alert" class="close close-sm" type="button">
                         <i class="fa fa-times"></i>
                     </button>
-                    <p><strong><i class="fa fa-warning"></i>注意: </strong>目前有免费线路5条，付费线路2条</p>
+                    <p><strong><i class="fa fa-warning"></i>注意: </strong>目前有免费线路4条，付费线路2条</p>
                     <p>会员可使用日本IDCF(移动联通)以及阿里云香港B(三网)</p>
                     <p>流量比例为0.5即使用1000MB按照500MB流量记录记录结算。</p>
                     <p>点击下方按钮可查看详细连接配置。</p>

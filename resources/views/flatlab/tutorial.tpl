@@ -54,7 +54,7 @@
                                                 <div class="panel-heading">图形化客户端</div>
                                                 <div class="panel-body">
                                                     <p>推荐使用此客户端</p>
-                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/client/ShadowsocksR-win-3.8.4.2e.7z'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
+                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/client/ShadowsocksR-win.7z'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
                                                     <p class="text-success" style="display:none; margin-top: 20px">正在处理下载请求，请稍后</p>
                                                 </div>
                                             </div>
@@ -148,7 +148,7 @@
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">APK</div>
                                                 <div class="panel-body">
-                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/client/ssr_3.0.2.2.apk'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
+                                                    <button onclick="location.href = 'https://v.gosiyi.com/downloads/client/ssr_3.1.5.1.apk'; $(this).next().show(300)" class="btn btn-primary">下载客户端</button>
                                                     <p class="text-success" style="display:none; margin-top: 20px">正在处理下载请求，请稍后</p>
                                                 </div>
                                             </div>

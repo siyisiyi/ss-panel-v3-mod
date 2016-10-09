@@ -28,10 +28,10 @@
 										
 										</p>
 						<h5>客户端下载</h5>
-						<p><a href="/downloads/client/ShadowsocksR-win-3.8.4.2e.zip"><i class="fa fa-windows"></i>&nbsp;Windows</a></p>
+						<p><a href="/downloads/client/ShadowsocksR-win.7z"><i class="fa fa-windows"></i>&nbsp;Windows</a></p>
 										<p><a href="/downloads/client/ShadowsocksX-R.134.zip"><i class="fa fa-adn"></i>&nbsp;Mac OS X</a></p>
 										<p><a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation"><i class="fa fa-linux"></i>&nbsp;Linux</a></p>
-										<p><a href="/downloads/client/ssr_3.0.2.2.apk"><i class="fa fa-android"></i>&nbsp;Android</a></p>
+										<p><a href="/downloads/client/ssr_3.1.5.1.apk"><i class="fa fa-android"></i>&nbsp;Android</a></p>
 										<p><a href="https://itunes.apple.com/cn/app/potatso-yi-jian-shi-pin-app/id1070901416?mt=8"><i class="fa fa-apple"></i>&nbsp;iOS</a></p>
 						<h5>自动配置</h5>
 						<!-- <p><a href="{$ssqr}" class="btn btn-primary">安装旧版软件的手机用默认浏览器点击直接添加配置</a></p> -->

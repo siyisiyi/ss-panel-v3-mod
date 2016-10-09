@@ -261,9 +261,7 @@
                                                                 <label class="floating-label" for="obfs">混淆方式</label>
                                                                 <select id="obfs" class="form-control">
                                                                     <option value="http_simple">http_simple</option>
-                                                                    <option value="tls_simple">tls_simple</option>
                                                                     <option value="random_head">random_head</option>
-                                                                    <option value="tls1.0_session_auth">tls1.0_session_auth</option>
                                                                     <option value="tls1.2_ticket_auth">tls1.2_ticket_auth</option>
                                                                 </select>
                                                             </div>
